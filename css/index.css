@@ -1,0 +1,504 @@
+section.banner_main {
+  text-align: center;
+  padding: 0 15px;
+  background-image: url("../img/home_banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 570px;
+  color: white; }
+  section.banner_main h1, section.banner_main h2 {
+    font-size: 64px;
+    font-family: 'Gotham Pro';
+    font-weight: 900;
+    font-style: italic;
+    text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    text-shadow: 0px 8px 0px rgba(0, 0, 0, 0.2); }
+  section.banner_main h2 {
+    font-size: 36px; }
+  section.banner_main p {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-style: italic; }
+
+section.about_school {
+  padding: 25px 0;
+  min-height: 765px;
+  text-align: center; }
+  section.about_school .point:after {
+    content: '';
+    z-index: -1;
+    border-right: 2px dotted rgba(255, 255, 255, 0.2);
+    height: 2000px;
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  section.about_school h3 {
+    margin-top: 20px; }
+  section.about_school img {
+    margin: 20px auto; }
+  section.about_school .button-skewed {
+    margin-top: 20px; }
+
+section.teachers {
+  padding: 25px 0;
+  min-height: 765px;
+  text-align: center;
+  background-image: url("../img/bg_equip.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 5%; }
+  section.teachers .text_block {
+    margin: 25px 0; }
+  section.teachers .slick-prev {
+    position: absolute; }
+  section.teachers .point:before, section.teachers .point:after {
+    content: '';
+    border-right: 2px dotted rgba(255, 255, 255, 0.2);
+    height: 2300px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  section.teachers .point:before {
+    z-index: 0;
+    height: 125px;
+    bottom: 12px; }
+  section.teachers .point:after {
+    top: 12px; }
+  section.teachers h3 {
+    margin-top: 20px; }
+  section.teachers .teacher-slide {
+    min-height: 500px; }
+    section.teachers .teacher-slide:focus {
+      outline: 0; }
+    section.teachers .teacher-slide h3 {
+      font-size: 24px;
+      text-transform: capitalize;
+      margin: 0; }
+    section.teachers .teacher-slide img {
+      margin: 0 auto; }
+    section.teachers .teacher-slide .button-skewed {
+      background-color: #1a1b1d;
+      padding: 8px 10px;
+      position: relative;
+      top: -23px; }
+    section.teachers .teacher-slide .info-card {
+      min-height: 286px;
+      background-image: url(../img/teacher_slide_bg.jpg);
+      font-style: italic;
+      padding: 20px 15px; }
+      section.teachers .teacher-slide .info-card .slide-list {
+        padding: 15px 0; }
+        section.teachers .teacher-slide .info-card .slide-list .item {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+          padding: 10px 0; }
+          section.teachers .teacher-slide .info-card .slide-list .item:last-child {
+            border-bottom: none; }
+          section.teachers .teacher-slide .info-card .slide-list .item h4 {
+            font-size: 12px;
+            margin: 0; }
+          section.teachers .teacher-slide .info-card .slide-list .item .award {
+            font-size: 14px;
+            font-weight: bold;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between; }
+            section.teachers .teacher-slide .info-card .slide-list .item .award div.icon {
+              background-position: center center;
+              background-repeat: no-repeat;
+              margin-left: 20px; }
+              section.teachers .teacher-slide .info-card .slide-list .item .award div.icon.medal-gold {
+                background-image: url(../img/gold_medal.png);
+                height: 20px;
+                width: 14px; }
+              section.teachers .teacher-slide .info-card .slide-list .item .award div.icon.medal-silver {
+                background-image: url(../img/silver_medal.png);
+                height: 20px;
+                width: 14px; }
+              section.teachers .teacher-slide .info-card .slide-list .item .award div.icon.cup-gold {
+                background-image: url(../img/gold_cup.png);
+                height: 20px;
+                width: 14px; }
+              section.teachers .teacher-slide .info-card .slide-list .item .award div.icon.medal-bronze {
+                background-image: url(../img/bronze_medal.png);
+                height: 20px;
+                width: 14px; }
+
+section.motopark {
+  text-align: center;
+  background-image: url("../img/bg_equip.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 5%;
+  padding-top: 80px; }
+  section.motopark .text_block {
+    margin: 25px 0; }
+  section.motopark .slick-arrow {
+    top: 50%; }
+  section.motopark .moto-slide {
+    min-height: 500px; }
+    section.motopark .moto-slide:focus {
+      outline: 0; }
+    section.motopark .moto-slide h3 {
+      font-size: 24px;
+      text-transform: uppercase;
+      font-weight: normal;
+      margin: 0; }
+    section.motopark .moto-slide img {
+      margin: 20px auto; }
+    section.motopark .moto-slide .button-skewed {
+      background-color: #1a1b1d;
+      padding: 8px 10px;
+      position: relative;
+      top: -23px; }
+    section.motopark .moto-slide .info-card {
+      min-height: 256px;
+      background-image: url(../img/teacher_slide_bg.jpg);
+      font-style: italic;
+      padding: 20px 15px; }
+      section.motopark .moto-slide .info-card .slide-list {
+        padding: 15px 0; }
+        section.motopark .moto-slide .info-card .slide-list .item {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+          padding: 10px 0; }
+          section.motopark .moto-slide .info-card .slide-list .item:last-child {
+            border-bottom: none; }
+          section.motopark .moto-slide .info-card .slide-list .item h4 {
+            font-size: 12px;
+            font-weight: normal;
+            margin: 0; }
+          section.motopark .moto-slide .info-card .slide-list .item .value {
+            font-size: 14px;
+            font-weight: bold;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between; }
+
+section.equipment {
+  height: 730px; }
+  section.equipment .container {
+    position: relative; }
+  section.equipment .point:after {
+    content: '';
+    border-right: 2px dotted rgba(255, 255, 255, 0.2);
+    height: 1090px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  section.equipment .point:after {
+    top: 0; }
+
+section.courses {
+  text-align: center;
+  padding-top: 250px;
+  padding-bottom: 150px; }
+  section.courses .slick-arrow {
+    top: 6%; }
+  section.courses .course-slide img {
+    margin: 15px auto; }
+  section.courses h3 {
+    margin: 20px 0; }
+  section.courses .point:after {
+    content: '';
+    border-right: 2px dotted rgba(255, 255, 255, 0.2);
+    height: 1400px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  section.courses .point:after {
+    top: 12px; }
+  section.courses .button-skewed {
+    background-color: #1a1b1d;
+    padding: 8px 10px;
+    font-style: normal; }
+    section.courses .button-skewed.red {
+      border: none;
+      position: relative;
+      top: -18px;
+      background-color: #a61904; }
+  section.courses .info-card {
+    min-height: 256px;
+    background-image: url(../img/teacher_slide_bg.jpg);
+    font-style: italic;
+    padding: 20px 15px;
+    padding-bottom: 40px; }
+    section.courses .info-card .slide-list {
+      padding: 15px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+      section.courses .info-card .slide-list .item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        border-bottom: none;
+        text-transform: uppercase;
+        padding: 5px 0; }
+        section.courses .info-card .slide-list .item h4 {
+          font-size: 12px;
+          font-weight: normal;
+          margin: 0; }
+        section.courses .info-card .slide-list .item .value {
+          font-size: 14px;
+          font-weight: bold;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between; }
+    section.courses .info-card .price {
+      margin-top: 20px; }
+      section.courses .info-card .price h4 {
+        font-size: 36px;
+        font-weight: 900; }
+        section.courses .info-card .price h4 span {
+          font-size: 16px;
+          font-weight: normal;
+          margin-left: 12px;
+          color: #999999; }
+
+section.testimonials {
+  text-align: center;
+  position: relative; }
+  section.testimonials .slick-arrow {
+    top: 38%; }
+  section.testimonials .button-skewed {
+    background-color: #1a1b1d;
+    padding: 8px 10px;
+    font-style: normal;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    width: 195px;
+    margin: 0 auto; }
+  section.testimonials .info-card {
+    min-height: 256px;
+    background-image: url(../img/teacher_slide_bg.jpg);
+    font-style: italic;
+    padding: 20px 15px;
+    padding-bottom: 40px;
+    margin-top: 100px;
+    position: relative;
+    padding-top: 100px; }
+    section.testimonials .info-card h4 {
+      font-weight: 900; }
+    section.testimonials .info-card .date {
+      font-size: 12px;
+      font-weight: 100;
+      color: #fff; }
+    section.testimonials .info-card h5 {
+      font-weight: normal;
+      text-transform: uppercase;
+      font-size: 12px; }
+    section.testimonials .info-card .img-wrap {
+      height: 158px;
+      width: 158px;
+      border: 4px solid red;
+      border-radius: 50%;
+      overflow: hidden;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      position: absolute;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      top: -79px; }
+    section.testimonials .info-card .text_block_white {
+      background-image: url(../img/text_white.png);
+      padding: 20px;
+      position: relative;
+      text-align: left;
+      margin: 30px 0; }
+      section.testimonials .info-card .text_block_white:before, section.testimonials .info-card .text_block_white:after {
+        position: absolute;
+        font-size: 72px;
+        font-family: 'Gotham Pro';
+        font-weight: 900;
+        font-style: italic;
+        text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
+        text-transform: uppercase; }
+      section.testimonials .info-card .text_block_white:before {
+        content: '\201C';
+        top: -47px;
+        left: 10px; }
+      section.testimonials .info-card .text_block_white:after {
+        content: '\201D';
+        bottom: -70px;
+        right: 18px; }
+
+section.contacts {
+  min-height: 500px;
+  background-image: url(../img/contact_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 36px; }
+  section.contacts .point:before {
+    content: '';
+    border-right: 2px dotted rgba(255, 255, 255, 0.2);
+    height: 155px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  section.contacts .point:before {
+    bottom: 10px; }
+  section.contacts .text_block {
+    margin-bottom: 40px; }
+  section.contacts .button-skewed {
+    background-color: #1a1b1d;
+    padding: 8px 10px;
+    font-style: normal;
+    width: auto; }
+    section.contacts .button-skewed.red {
+      border: none;
+      position: relative;
+      top: -18px;
+      background-color: #a61904; }
+  section.contacts .info-card {
+    min-height: 200px;
+    background-image: url(../img/teacher_slide_bg.jpg);
+    font-style: italic;
+    padding: 20px 0px 20px 15px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  section.contacts .list-tel, section.contacts .list-mail {
+    text-align: left;
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 2; }
+    section.contacts .list-tel li:first-child, section.contacts .list-mail li:first-child {
+      position: relative; }
+      section.contacts .list-tel li:first-child:before, section.contacts .list-mail li:first-child:before {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        width: 31px;
+        height: 31px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        display: block; }
+    section.contacts .list-tel li a, section.contacts .list-mail li a {
+      padding-left: 50px;
+      color: white; }
+      section.contacts .list-tel li a:focus, section.contacts .list-mail li a:focus {
+        color: white; }
+  section.contacts .list-tel li:first-child:before {
+    background: url(../img/phone_ico.png), -webkit-gradient(linear, left top, left bottom, from(#d73615), to(#ac0802));
+    background: url(../img/phone_ico.png), linear-gradient(to bottom, #d73615 0%, #ac0802 100%);
+    background-repeat: no-repeat;
+    background-position: center center; }
+  section.contacts .list-mail li:first-child:before {
+    background: url(../img/env_ico.png), -webkit-gradient(linear, left top, left bottom, from(#d73615), to(#ac0802));
+    background: url(../img/env_ico.png), linear-gradient(to bottom, #d73615 0%, #ac0802 100%);
+    background-repeat: no-repeat;
+    background-position: center center; }
+
+footer.page-footer {
+  min-height: 190px;
+  background-image: url(../img/footer_bg.jpg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  text-align: center; }
+  footer.page-footer .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 120px;
+    margin-bottom: 25px; }
+  footer.page-footer .copyright h5 {
+    line-height: 1.5;
+    font-family: 'Gotham Pro';
+    font-weight: 900;
+    font-style: italic;
+    text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase; }
+
+/*# sourceMappingURL=index.css.map */
