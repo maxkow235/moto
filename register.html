@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Twowheels Home</title>
+    <link rel="stylesheet" href="css/base.css">
+    
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="navbar navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="index.html">TW</a>
+        <div class="user  ml-auto">
+          <a class="login-btn" href="#">
+            
+          </a>
+          
+        </div>
+        <button class="navbar-toggler collapsed" type="button"  data-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                О школе
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Тест</a>
+                <a class="dropdown-item" href="#">Тест</a>
+                <a class="dropdown-item" href="#">Тест</a>
+                
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="news.html">новости </a>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
+    </header>
+    
+    <section class="login">
+      <div class="header">
+        <h1>Регистрация</h1>
+        <p><img src="img/required.png" alt=""> обязательные поля для заполнения</p>
+      </div>
+      <form action="">
+        <div class="main-form">
+          
+          <div class="container">
+            
+            <div class="form-group">
+              <input type="text" class="form-control" id="name" name="name" placeholder=" " required>
+              <label class="form-control-placeholder" for="name">Логин или Email</label>
+            </div>
+            <div class="form-group">
+              <input type="password" name="password" id="password" class="form-control" placeholder=" " required>
+              <label class="form-control-placeholder" for="password">Пароль</label>
+            </div>
+            <div class="form-group">
+              <input type="password" name="repeat_password" id="repeat_password" class="form-control" placeholder=" " required>
+              <label class="form-control-placeholder" for="repeat_password">Повторите пароль</label>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" id="email" class="form-control" placeholder=" " required>
+              <label class="form-control-placeholder" for="email">Email</label>
+            </div>
+            <div class="form-group">
+              <input type="tel" name="tel" id="tel" class="form-control" placeholder=" " required pattern="^[+]?[0-9]{9,12}$">
+              <label class="form-control-placeholder" for="tel">Телефон</label>
+            </div>
+            <div class="form-group birth-date">
+              <p>Дата рождения</p>
+              <select name="day" id="b_day">
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select>
+              <select name="month" id="b_month">
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+              <select name="year" id="b_year">
+                <option value='1947'>1947</option>
+                <option value='1948'>1948</option>
+                <option value='1949'>1949</option>
+                <option value='1950'>1950</option>
+                <option value='1951'>1951</option>
+                <option value='1952'>1952</option>
+                <option value='1953'>1953</option>
+                <option value='1954'>1954</option>
+                <option value='1955'>1955</option>
+                <option value='1956'>1956</option>
+              </select>
+              
+            </div>
+            
+          </div>
+        </div>
+        <div class="optional-form">
+          <div class="container">
+            <p>Заполни форму ниже и получи дополнительные баллы</p>
+            <div class="form-group">
+              <input type="text" class="form-control" id="name_lastname" name="name_lastname" placeholder=" " >
+              <label class="form-control-placeholder" for="name_lastname">Имя и Фамилия</label>
+            </div>
+            <div class="input_field range-slider">
+              <label for="range">Стаж вождения</label>
+              <input class="range-slider__range" type="range" id="range_years" onchange="radioVal(this.value);" name="range_years" min="0" max="20" step="1">
+              <div class="value_block"><span class="range-slider__value"></span> лет</div>
+              <div class="values_list">0 5 10 15 20</div>
+            </div>
+            <div class="form-group driver-license">
+              <p>Наличие прав категории А:</p>
+              <input type="radio" name="license" id="yes" >
+              <label for="yes"> Есть</label>
+            
+              <input type="radio" name="license" id="no" >
+              <label for="no"> Нет</label>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="fb_link" name="fb_link" placeholder=" " >
+              <label class="form-control-placeholder" for="fb_link">Ссылка на Facebook</label>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="inst_link" name="inst_link" placeholder=" " >
+              <label class="form-control-placeholder" for="inst_link">Ссылка на Instagram</label>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="nav-buttons">
+        <input type="submit" class="button-skewed red" value="Регистрация">
+        <a href="#" class="button-skewed" class="button-skewed red">Вход</a>
+      </div>
+      
+    </section>
+    
+    <footer class="page-footer">
+      <div class="social">
+        <a href="#"><img src="img/fb_circle.png" alt="facebook"></a>
+        <a href="#"><img src="img/inst_circle.png" alt="inst"></a>
+      </div>
+      <div class="copyright">
+        <h5>TWO WHEEL ACADEMY<br> BY FREERIDERS © 2017</h5>
+      </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

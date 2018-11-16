@@ -1,0 +1,25 @@
+body {
+  padding-top: 100px;
+  text-align: center; }
+
+#leave-feedback {
+  position: static;
+  margin: 21px auto;
+  display: block; }
+
+section.testimonials {
+  padding-bottom: 60px; }
+  section.testimonials .info-card {
+    margin-top: 150px; }
+
+.comment-form {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.course-select {
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 14px; }
+
+/*# sourceMappingURL=testimonials.css.map */

@@ -1,0 +1,65 @@
+body {
+  padding-top: 70px; }
+
+h1 {
+  font-size: 24px;
+  margin: 25px 0;
+  font-family: 'Gotham Pro';
+  font-weight: 900;
+  font-style: italic;
+  text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase; }
+
+section.main {
+  padding-bottom: 100px;
+  text-align: center; }
+  section.main .text_block {
+    margin-bottom: 35px; }
+  section.main .info-card {
+    text-align: left;
+    background-image: url(../img/teacher_slide_bg.jpg);
+    padding: 17px;
+    position: relative;
+    font-style: italic; }
+    section.main .info-card.price {
+      margin-bottom: 11px; }
+    section.main .info-card h3, section.main .info-card p {
+      font-size: 16px; }
+    section.main .info-card .slide-list {
+      padding: 15px 0; }
+      section.main .info-card .slide-list .item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 10px 0; }
+        section.main .info-card .slide-list .item:last-child {
+          border-bottom: none; }
+        section.main .info-card .slide-list .item h4 {
+          font-size: 12px;
+          font-weight: normal;
+          margin: 0; }
+        section.main .info-card .slide-list .item .value {
+          font-size: 14px;
+          font-weight: bold;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between; }
+    section.main .info-card .button-skewed.red {
+      position: absolute;
+      bottom: -20px;
+      width: 260px;
+      left: 0;
+      right: 0;
+      margin: 0 auto; }
+
+/*# sourceMappingURL=motoservice.css.map */

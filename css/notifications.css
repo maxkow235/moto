@@ -1,0 +1,60 @@
+body {
+  padding-top: 70px; }
+
+h1 {
+  font-size: 24px;
+  margin: 25px 0;
+  font-family: 'Gotham Pro';
+  font-weight: 900;
+  font-style: italic;
+  text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase; }
+
+section.main {
+  text-align: center; }
+  section.main .period {
+    position: relative;
+    margin-top: 30px; }
+    section.main .period h2 {
+      font-size: 20px;
+      font-family: 'Gotham Pro';
+      font-weight: 900;
+      font-style: italic;
+      text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
+      text-transform: uppercase; }
+  section.main .notif-card {
+    margin-top: 30px;
+    text-align: left;
+    background-image: url(../img/teacher_slide_bg.jpg);
+    padding: 17px;
+    position: relative;
+    font-style: italic; }
+    section.main .notif-card .head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-flow: row nowrap;
+      margin-bottom: 20px; }
+    section.main .notif-card .notif_id, section.main .notif-card span.red {
+      font-size: 14px;
+      color: #ee2c15;
+      font-weight: bold; }
+    section.main .notif-card .notif_from {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.3);
+      font-weight: 400; }
+
+div.point {
+  position: static; }
+
+.point:after {
+  content: '';
+  z-index: -1;
+  border-right: 2px dotted rgba(255, 255, 255, 0.2);
+  bottom: 0;
+  position: absolute;
+  top: 64px;
+  left: 50%;
+  transform: translateX(-50%); }
+
+/*# sourceMappingURL=notifications.css.map */

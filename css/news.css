@@ -1,0 +1,218 @@
+@charset "UTF-8";
+body {
+  padding-top: 60px; }
+
+.tools {
+  padding-top: 35px;
+  text-align: center; }
+  .tools h1 {
+    font-size: 20px;
+    margin-bottom: 0;
+    font-family: 'Gotham Pro';
+    font-weight: 900;
+    font-style: italic;
+    text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase; }
+  .tools .button-skewed {
+    border: 2px solid #757677;
+    width: 280px;
+    margin-top: 20px; }
+    .tools .button-skewed:after {
+      margin-left: 15px;
+      content: "►"; }
+    .tools .button-skewed.open:after {
+      content: "▼"; }
+  .tools .search-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 260px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 10px; }
+    .tools .search-form .border-gray {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      height: 2px;
+      width: 0;
+      -webkit-transition: width 0.3s ease-in-out;
+      transition: width 0.3s ease-in-out;
+      background-color: #808184; }
+  .tools .searchbar {
+    background: none;
+    border: 0 none;
+    outline: none;
+    color: #808184;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    font-style: italic;
+    font-size: 16px;
+    width: 100%; }
+    .tools .searchbar + label {
+      margin: 0; }
+      .tools .searchbar + label svg {
+        fill: #808184;
+        height: 16px;
+        width: 16px; }
+    .tools .searchbar:focus + label + .border-gray {
+      width: 100%; }
+
+.date-popup {
+  position: relative;
+  min-height: 205px;
+  background-image: url(../img/teacher_slide_bg.jpg);
+  border-radius: 8px;
+  background-color: black;
+  -webkit-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.004);
+          box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.004);
+  font-size: 16px;
+  text-align: center;
+  font-style: italic;
+  padding: 10px; }
+  .date-popup .button-skewed {
+    border: 2px solid #757677;
+    width: 230px;
+    margin-top: 30px; }
+  .date-popup .picker {
+    text-transform: uppercase;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 14px;
+    width: 110px; }
+  .date-popup .from, .date-popup .to {
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .date-popup .from {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+
+.slick-arrow {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  position: relative;
+  padding: 1px 6px; }
+  .slick-arrow:active {
+    background-color: transparent; }
+  .slick-arrow.larr:before {
+    content: '';
+    left: -2px;
+    background-image: url(../img/larr_slider.png);
+    background-size: 50%; }
+  .slick-arrow.rarr:before {
+    content: '';
+    right: -2px;
+    background-image: url(../img/rarr_slider.png);
+    background-size: 50%; }
+
+section.period {
+  text-align: center;
+  padding-top: 30px;
+  position: relative; }
+  section.period .point {
+    position: static; }
+  section.period .point:after {
+    content: '';
+    z-index: -1;
+    border-right: 2px dotted rgba(255, 255, 255, 0.2);
+    position: absolute;
+    bottom: 0;
+    top: 65px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  section.period h2 {
+    font-size: 16px;
+    font-family: 'Gotham Pro';
+    font-weight: 900;
+    font-style: italic;
+    text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase; }
+  section.period .news-card {
+    margin-top: 35px;
+    margin-bottom: 55px;
+    background-color: white;
+    min-height: 450px;
+    color: #333333;
+    position: relative; }
+    section.period .news-card .text {
+      text-align: left;
+      padding: 15px; }
+    section.period .news-card h3 {
+      font-weight: 900;
+      text-transform: uppercase; }
+    section.period .news-card p {
+      font-weight: italic;
+      font-size: 14px; }
+    section.period .news-card img {
+      width: 100%; }
+    section.period .news-card .info {
+      color: white;
+      background-image: url(../img/polosa.png), linear-gradient(103deg, #cc3408, #cd1903);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding: 15px;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-style: italic; }
+      section.period .news-card .info .interactions {
+        font-size: 14px;
+        font-weight: normal;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 125px;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        section.period .news-card .info .interactions .views:before {
+          content: url(../img/eye.png);
+          margin-right: 6px; }
+        section.period .news-card .info .interactions .comments:before {
+          content: url(../img/comment.png);
+          margin-right: 6px; }
+      section.period .news-card .info .date .day {
+        font-size: 20px; }
+    section.period .news-card .button-skewed {
+      background-color: #1a1b1d;
+      border: 2px solid white;
+      width: 90%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      bottom: -25px; }
+
+/*# sourceMappingURL=news.css.map */

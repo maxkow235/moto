@@ -5,24 +5,52 @@
     <title>Twowheels Home</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <script>
-    
-    </script>
   </head>
   <body>
+    <div id="course-popup" class="mfp-hide">
+      <div class="before-submit">
+        <h3>Заявка на обучение</h3>
+        <p>Для начала обучения осталось
+        заполнить анкету:</p>
+        <form action="">
+          <div class="form-group">
+            <input type="text" class="form-control" name="name" required>
+            <label class="form-control-placeholder" for="name">Ваше имя и фамилия</label>
+          </div>
+          <div class="form-group">
+            <input type="tel" name="number" class="form-control" required>
+            <label class="form-control-placeholder" for="number">Ваш телефон</label>
+          </div>
+          <div class="form-group">
+            <label>Курс:</label><br>
+            <select name="course" id="course-select">
+              <option value="0">Продвинутый, 3500 UAH</option>
+              <option value="1">Продвинутый, 3500 UAH</option>
+              <option value="2">Продвинутый, 3500 UAH</option>
+            </select>
+            
+          </div>
+          <input type="submit" value="Поехали!" class="button-skewed red">
+        </form>
+      </div>
+      <div class="after-submit">
+        <h3>Спасибо за заявку!</h3>
+        <p>Наш менеджер перезвонит Вам в
+        течении ближайшего времени!</p>
+      </div>
+    </div>
     <header class="page-header">
       <nav class="navbar navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">TW</a>
+        <a class="navbar-brand" href="index.html">TW</a>
         <div class="user  ml-auto">
-           <a class="profile" href="#">
-            <img src="img/avatar_sm.png" alt="avatar"> 
-            </a>
-            <div class="notification">2</div>
-            </div>
+          <a class="profile" href="#">
+            <img src="img/avatar_sm.png" alt="avatar">
+          </a>
+          <div class="notification">2</div>
+        </div>
         <button class="navbar-toggler collapsed" type="button"  data-target="#navbarContent">
-
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarContent">
@@ -40,32 +68,9 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">новости </a>
+              <a class="nav-link" href="news.html">новости </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">кафедра</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">мотопарк</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">экипировка</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">пакеты</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">отзывы</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">отзывы</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">отзывы</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">отзывы</a>
-            </li>
+            
           </ul>
         </div>
       </nav>
@@ -430,7 +435,7 @@
               </div>
               <a href="#" class="button-skewed"><span>Подробнеe</span></a>
             </div>
-            <a href="#" class="button-skewed red">Записаться</a>
+            <a href="#course-popup" id="course-assign" class="button-skewed red">Записаться</a>
           </div>
           <div class="course-slide">
             <div class="info-card">
@@ -474,7 +479,7 @@
               </div>
               <a href="#" class="button-skewed"><span>Подробнеe</span></a>
             </div>
-            <a href="#" class="button-skewed red">Записаться</a>
+            <a href="#course-popup" id="course-assign" class="button-skewed red">Записаться</a>
           </div>
           <div class="course-slide">
             <div class="info-card">
@@ -484,11 +489,13 @@
                 <div class="item">
                   <div class="icon book-ico"></div>
                   <h4><b>3</b> Занятия</h4>
+                  
                 </div>
                 
                 <div class="item">
                   <div class="icon clock-ico"></div>
                   <h4><b>4</b> Дня</h4>
+                  
                 </div>
                 <div class="item">
                   <div class="icon bike-ico"></div>
@@ -516,9 +523,11 @@
               </div>
               <a href="#" class="button-skewed"><span>Подробнеe</span></a>
             </div>
-            <a href="#" class="button-skewed red">Записаться</a>
+            <a href="#course-popup" id="course-assign" class="button-skewed red">Записаться</a>
           </div>
+          
         </div>
+        
         
       </section>
       <section class="testimonials">
@@ -599,17 +608,17 @@
                 Мотоцикл - неотъемлемая часть тренировок, именно поэтому наш мотопарк заслуживает отдельного внимания.
               </p>
             </div>
+            <img src="img/iphone.png" alt="">
             <div class="info-card">
-                <ul class="list-tel">
-                  <li><a href="tel:0939799912">+3 (093) <b>97-999-12</b></a></li>
-                  <li><a href="tel:0661228113">+3 (066) <b>12-281-13</b></a></li>
-                  <li><a href="tel:0672439564">+3 (067) <b>24-395-64</b></a></li>
-
-                </ul>
-                <ul class="list-mail">
-                  <li><a href="mailto:lovetoride@two-wheel.com.ua"><b>lovetoride</b>@two-wheel.com.ua</a></li>
+              <ul class="list-tel">
+                <li><a href="tel:0939799912">+3 (093) <b>97-999-12</b></a></li>
+                <li><a href="tel:0661228113">+3 (066) <b>12-281-13</b></a></li>
+                <li><a href="tel:0672439564">+3 (067) <b>24-395-64</b></a></li>
+              </ul>
+              <ul class="list-mail">
+                <li><a href="mailto:lovetoride@two-wheel.com.ua"><b>lovetoride</b>@two-wheel.com.ua</a></li>
                 
-                </ul>
+              </ul>
             </div>
             <a href="#" class="button-skewed red">Записаться на занятие</a>
           </div>
@@ -626,9 +635,11 @@
         </footer>
         <script src="js/jquery.min.js"></script>
         <script src="js/slick.min.js"></script>
+        
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
         <script src="js/main.js"></script>
-        
       </body>
     </html>
