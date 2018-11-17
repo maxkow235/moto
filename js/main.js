@@ -9,8 +9,8 @@ $(document).ready(function() {
 		closeBtnInside: false
 	})
 	$('#pizda').magnificPopup({
-		type:'inline',
-		midClick:true
+		type: 'inline',
+		midClick: true
 
 	})
 
@@ -26,6 +26,24 @@ $(document).ready(function() {
 		closeBtnInside: false
 	})
 
+	$('#rating_table .card').click(function() {
+		$(this).toggleClass('open')
+	})
+
+	$('input.time_input').inputmask("99:99");
+
+	$('#nameedit').magnificPopup({
+		type: 'inline',
+		midClick: true,
+		closeBtnInside: false
+	});
+
+	$('#timeedit').magnificPopup({
+		type: 'inline',
+		midClick: true,
+		closeBtnInside: false
+	});
+
 	//test popup sumbit REMOVE ON PRODUCTION
 	$('#course-popup input[type=submit]').click(function(e) {
 		e.preventDefault()
@@ -40,13 +58,49 @@ $(document).ready(function() {
 		$($(this).data('target')).toggleClass('show');
 	});
 
+	$('.prod-card').click(function() {
+		$(this).removeClass('blur');
+		$(this).toggleClass('selected');
+
+		$(this).each(function() {
+			if ($('.prod-card.selected').length > 0) {
+				$('#btn-trade').removeClass('d-none');
+				$('.prod-card:not(.selected)').addClass('blur')
+			} else {
+				$('#btn-trade').addClass('d-none');
+				$('.prod-card:not(.selected)').removeClass('blur')
+			}
+		});
+	})
 
 
-	$('.slick-teachers, .slick-moto, .slick-courses, .slick-testimonials').slick({
+
+	$('.slick-teachers, .slick-moto, .slick-courses, .slick-testimonials ').slick({
 		nextArrow: '<button class="arrow-right"></button>',
 		prevArrow: '<button class="arrow-left"></button>',
 
 	})
+	$('.slick-prof-courses').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
+		//currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+		var i = (currentSlide ? currentSlide : 0) + 1;
+		$('.slider-courses .counter').html("<span class='current'>" + i + "</span>" + "<span class='total'>/" + slick.slideCount + "</span>");
+	});
+
+	$('.slick-prof-courses').slick({
+		nextArrow: '<button class="arrow-right"></button>',
+		prevArrow: '<button class="arrow-left"></button>',
+
+	})
+
+	$('.courses-sm-slick').slick({
+		nextArrow: '<button class="arrow-right"></button>',
+		prevArrow: '<button class="arrow-left"></button>',
+		dots: true
+
+	})
+
+
+
 	// the containers for all your galleries
 	if ($('.media-gallery .gallery') !== undefined) {
 		$('.media-gallery .gallery').magnificPopup({
@@ -123,15 +177,15 @@ $(document).ready(function() {
 		},
 		dayClick: function(date, jsEvent, view) {
 
-			
 
 
 			$.magnificPopup.open({
-				
+
 				items: {
 					src: '#event_popup',
 				},
-				type: 'inline'
+				type: 'inline',
+				closeBtnInside: false
 			});
 
 

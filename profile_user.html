@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Twowheels Profile</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="navbar navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="index.html">TW</a>
+        <div class="user  ml-auto">
+          <a class="profile" href="#">
+            <img src="img/avatar_sm.png" alt="avatar">
+          </a>
+          <div class="notification">2</div>
+        </div>
+        <button class="navbar-toggler collapsed" type="button"  data-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                О школе
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Тест</a>
+                <a class="dropdown-item" href="#">Тест</a>
+                <a class="dropdown-item" href="#">Тест</a>
+                
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="news.html">новости </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="profile user-own">
+      <div class="container">
+        <div class="name">
+          <h1>Александрий<br> Длиннофамилевич</h1>
+          <a href="#editname_popup" id="nameedit" class="edit-link"><img src="img/edit_pencil.png" alt=""></a>
+          <div id="editname_popup" class="popup mfp-hide">
+            <h3>Ваши данные</h3>
+            <form action="">
+              <div class="form-group">
+                <input type="text" class="form-control" id="name" name="name" placeholder=" ">
+                <label class="form-control-placeholder" for="name">Имя</label>
+              </div>
+              <div class="form-group">
+                <input type="test" name="lastname" id="lastname" class="form-control" placeholder=" ">
+                <label class="form-control-placeholder" for="password">Фамилия</label>
+              </div>
+              <input type="submit" class="button-skewed red" value="Сохранить">
+            </form>
+          </div>
+        </div>
+        <div class="slide-list">
+          <div class="item">
+            <h4>Ваша продуктивность</h4>
+            <div class="value">
+              69%
+            </div>
+          </div>
+          <div class="item">
+            <h4>Баллов заработано</h4>
+            <div class="value">
+              34567
+            </div>
+          </div>
+          <div class="item">
+            <h4>Часов накатано</h4>
+            <div class="value">
+              234 ч
+            </div>
+          </div>
+        </div>
+        
+        <div class="profile-nav">
+          <div class="links">
+            <a href="#" class="nav-btn "><img src="img/cal_nav.png" alt=""></a>
+            <a href="#" class="user-avatar"><img src="img/profile_avatar.jpg" alt=""></a>
+            <a href="#" class="nav-btn"><img src="img/shop_nav.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+      <div class="progress-wrap">
+        <div class="progress_item">
+          <div class="name_descr">
+            <div class="name">Бывалый</div>
+            <div class="description">Ваш уровень</div>
+          </div>
+          <div class="progress_bar">
+            <div class="progress_line" style="width: calc((510/700)*100%)"></div>
+            <div class="data">
+              <span>510</span> /
+              <span>700</span>
+            </div>
+          </div>
+          <div class="progress_left">
+            Осталось
+            <span>510</span> баллов до след. уровня
+          </div>
+        </div>
+        <div class="progress_item">
+          <div class="name_descr">
+            <div class="name">Трековая езда</div>
+            <div class="description">курс</div>
+          </div>
+          <div class="progress_bar">
+            <div class="progress_line" style="width: calc((5/10)*100%)"></div>
+            <div class="data">
+              <span>5</span> /
+              <span>10</span>
+            </div>
+          </div>
+          <div class="progress_left">
+            Осталось
+            <span>5</span> занятий до след. курса
+          </div>
+        </div>
+        <div class="progress_item">
+          <div class="name_descr">
+            <div class="name">13%</div>
+            <div class="description">ваша скидка</div>
+          </div>
+          <div class="progress_bar">
+            <div class="progress_line" style="width: calc((8451/17890)*100%)"></div>
+            <div class="data">
+              <span>8451</span> /
+              <span>17890</span>
+            </div>
+          </div>
+          <div class="progress_left">
+            Осталось
+            <span>3456</span> баллов до скидки 15%
+          </div>
+          <a href="#" class="terms_disc">Условия скидки</a>
+        </div>
+        
+      </div>
+      <div class="container">
+        <div class="name best-time">
+          <h2>Лучшее Время</h2>
+          <a href="#edittime_popup" id="timeedit" class="edit-link"><img src="img/edit_pencil.png" alt=""></a>
+          <div id="edittime_popup" class="popup mfp-hide">
+            <h3>Лучшее время</h3>
+            <p>Изменения вступят в силу после проверки модератором</p>
+            <form action="">
+              <div class="form-group">
+                <label for="time1">Чайка <b>Большое кольцо:</b></label><br>
+                <input type="text" class="form-control time_input" name="time1" placeholder="00:00">
+                <span class="txt">сек</span>
+              </div>
+               <div class="form-group">
+                <label for="time2">Чайка <b>Малое кольцо:</b></label><br>
+                <input type="text" class="form-control time_input" name="time2" placeholder="00:00">
+                <span class="txt">сек</span>
+              </div>
+               <div class="form-group">
+                <label for="time3">Картинг трек <b>Большое кольцо:</b></label><br>
+                <input type="text" class="form-control time_input" name="time3" placeholder="00:00">
+                <span class="txt">сек</span>
+              </div>
+              <input type="submit" class="button-skewed red" value="Сохранить">
+            </form>
+          </div>
+        </div>
+        <div class="slide-list">
+          <div class="item">
+            <h4>Чайка <b>Большое кольцо</b></h4>
+            <div class="value">
+              69%
+            </div>
+          </div>
+          <div class="item">
+            <h4> Картинг трек <b>Блокбастер</b></h4>
+            <div class="value">
+              34567
+            </div>
+          </div>
+          <div class="item">
+            <h4>Часов накатано</h4>
+            <div class="value">
+              234 ч
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="button-skewed red"><span>Таблица рейтинга</span></a>
+    </section>
+    <section class="slider-courses">
+      <div class="counter"></div>
+      <div class="slick-prof-courses">
+        <div class="prof-slide">
+          <div class="container">
+            <div class="slide-head">
+              <h3>Вступительное занятие</h3>
+              <h5>Награда:<span class="red"> 360</span> баллов</h5>
+            </div>
+            <div class="slide-body">
+              <p>
+                Работа над: разучим пульт управления, посадку на мотоцикл, и посадку за рулем, поставим профессиональ-
+                но зрение, разучим алгоритм переключения передач, разучим еще много разных важных мелочей и поедем с двумя ногами на подножках.
+              </p>
+              <div class="text_block_white">
+                <p> Вам нравятся мотоциклы и вы хотите научиться ездить, но не знаете с чего начать? Наша команда профессионалов подготовила для Вас специальную программу, которая введет Вас в мир мото и покажет все прелести и радости этой вселенной! </p>
+                <div class="tri"></div>
+              </div>
+              <div class="coach-prof">
+                <div class="avatar-sm">
+                  <img src="img/avatar_sm_coach.jpg" alt="Coach">
+                </div>
+                <div class="name_desc">
+                  <div class="name">Владимир Сергеевич</div>
+                  <div class="desc">тренер</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="completed">
+            <div class="button-skewed red complete">Завершено</div>
+            <div class="date">22.07.2017</div>
+          </div>
+        </div>
+        <div class="prof-slide">
+          <div class="container">
+            <div class="slide-head">
+              <h3>Вступительное занятие</h3>
+              <h5>Награда:<span class="red"> 360</span> баллов</h5>
+            </div>
+            <div class="slide-body">
+              <p>
+                Работа над: разучим пульт управления, посадку на мотоцикл, и посадку за рулем, поставим профессиональ-
+                но зрение, разучим алгоритм переключения передач, разучим еще много разных важных мелочей и поедем с двумя ногами на подножках.
+              </p>
+              <div class="text_block_white">
+                <p> Вам нравятся мотоциклы и вы хотите научиться ездить, но не знаете с чего начать? Наша команда профессионалов подготовила для Вас специальную программу, которая введет Вас в мир мото и покажет все прелести и радости этой вселенной! </p>
+                <div class="tri"></div>
+              </div>
+              <div class="coach-prof">
+                <div class="avatar-sm">
+                  <img src="img/avatar_sm_coach.jpg" alt="Coach">
+                </div>
+                <div class="name_desc">
+                  <div class="name">Владимир Сергеевич</div>
+                  <div class="desc">тренер</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="completed">
+            <div class="button-skewed red">Завершено</div>
+            <div class="date">22.07.2017</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="page-footer">
+      <div class="social">
+        <a href="#"><img src="img/fb_circle.png" alt="facebook"></a>
+        <a href="#"><img src="img/inst_circle.png" alt="inst"></a>
+      </div>
+      <div class="copyright">
+        <h5>TWO WHEEL ACADEMY<br> BY FREERIDERS © 2017</h5>
+      </div>
+    </footer>
+    
+    <script src="js/jquery.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/moment.min.js"></script>
+        <script src="js/fullcalendar.min.js"></script>
+         <script src="js/jquery.inputmask.bundle.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
+    
+  </body>
+</html>

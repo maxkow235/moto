@@ -42,61 +42,84 @@
         </div>
       </nav>
     </header>
-   <section class="profile">
-    <a href="#event_popup" id="pizda">safwa</a>
-    <h1>Календарь<br> тренировок</h1>
-     <div class="container">
-      <div class="profile-nav">
-       <div class="links">
-          <a href="#" class="nav-btn active"><img src="img/cal_nav.png" alt=""></a>
-         <a href="#" class="nav-btn "><img src="img/helm_nav.png" alt=""></a>
-         <a href="#" class="nav-btn"><img src="img/shop_nav.png" alt=""></a>
-       </div>
+    <section class="profile">
+      
+      <h1>Календарь<br> тренировок</h1>
+      <div class="container">
+         <div id="event_popup" class="popup mfp-hide event_popup">
+      <form>
+        <div class="input_field">
+           <label for="teacher">Тренер:</label><br>
+          <select name="teacher" id="instructor_id" class="select_menu" >
+            <option disabled="" selected="">Выберите тренера</option>
+            <option value="37">Белоцкий Олег</option>
+            <option value="44">Instructor Второй</option>
+            </select>
+            
+           
+          </div>
+          <div class="input_field range-slider clearfix">
+            <label for="range">Начало тренировки:</label>
+            <input class="range-slider__range" type="range" id="range" name="range" value="0" min="7" max="23" step="1">
+            <div class="value_block time"><span class="range-slider__value">0</span>:00</div>
+            <div class="values_list">7:00 11:00 15:00 19:00 23:00</div>
+            <button type="button" class="button-skewed">Добавить</button>
+            <input type="hidden" id="event_type" value="future_unconfirmed">
+            <input type="hidden" id="event_date" value="2018-11-23">
+          </div>
+        </form>
       </div>
-       <div class="calendar" id="calendar">
-         
-       </div>
-
-       <div class="legend">
-                    
-                    <div>
-                        <span class="future">T</span>
-                        Предстоящие тренировки 
-                    </div>
-                    <div>
-                        <span class="not_available">T</span>
-                        Недоступные дни
-                    </div>
-                   
-                    <div>
-                        <span class="past">T</span>
-                        Прошедшие тренировки
-                    </div>
-                   
-                </div>
-       
-     </div>
-   </section>
-    <footer class="page-footer">
-      <div class="social">
-        <a href="#"><img src="img/fb_circle.png" alt="facebook"></a>
-        <a href="#"><img src="img/inst_circle.png" alt="inst"></a>
+        <div class="profile-nav">
+          <div class="links">
+            <a href="#" class="nav-btn active"><img src="img/cal_nav.png" alt=""></a>
+            <a href="#" class="nav-btn "><img src="img/helm_nav.png" alt=""></a>
+            <a href="#" class="nav-btn"><img src="img/shop_nav.png" alt=""></a>
+          </div>
+        </div>
+        <div class="calendar" id="calendar">
+          
+        </div>
+        <div class="legend">
+          
+          <div>
+            <span class="future">T</span>
+            Предстоящие тренировки
+          </div>
+          <div>
+            <span class="not_available">T</span>
+            Недоступные дни
+          </div>
+          
+          <div>
+            <span class="past">T</span>
+            Прошедшие тренировки
+          </div>
+          
+        </div>
+        
       </div>
-      <div class="copyright">
-        <h5>TWO WHEEL ACADEMY<br> BY FREERIDERS © 2017</h5>
-      </div>
-    </footer>
+    </section>
 
-
-    <div id="event_popup" class="mfp-hide popup">suak</div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/moment.min.js"></script>
-     <script src="js/fullcalendar.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
-    
-  </body>
-</html>
+        
+        <footer class="page-footer">
+          <div class="social">
+            <a href="#"><img src="img/fb_circle.png" alt="facebook"></a>
+            <a href="#"><img src="img/inst_circle.png" alt="inst"></a>
+          </div>
+          <div class="copyright">
+            <h5>TWO WHEEL ACADEMY<br> BY FREERIDERS © 2017</h5>
+          </div>
+        </footer>
+        
+        <script src="js/jquery.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/moment.min.js"></script>
+        <script src="js/fullcalendar.min.js"></script>
+         <script src="js/jquery.inputmask.bundle.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
+        
+      </body>
+    </html>

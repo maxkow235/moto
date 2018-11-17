@@ -1,14 +1,193 @@
 @import url(./fullcalendar.min.css);
-body {
-  padding-top: 125px; }
+.progress_item {
+  padding: 25px 15px;
+  color: #333333;
+  font-style: italic;
+  text-transform: uppercase; }
+  .progress_item .name_descr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .progress_item .name_descr .name {
+      font-size: 18px;
+      font-weight: bold; }
+    .progress_item .name_descr .description {
+      font-size: 12px;
+      font-weight: bold;
+      color: #90949d; }
+  .progress_item.small .name {
+    font-size: 12px;
+    color: #90949d; }
+  .progress_item.small .description {
+    font-size: 18px;
+    color: #333333; }
+  .progress_item.small .progress_left {
+    font-size: 12px; }
+    .progress_item.small .progress_left span {
+      font-size: 20px;
+      font-weight: 900;
+      color: #c52a0b; }
+  .progress_item.small .progress_bar {
+    height: 12px; }
+    .progress_item.small .progress_bar .data {
+      display: none; }
+  .progress_item .progress_bar .data {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic; }
+  .progress_item .progress_left {
+    text-transform: none; }
+    .progress_item .progress_left span {
+      font-weight: bold; }
+  .progress_item .terms_disc {
+    color: #c3270b;
+    text-decoration: underline;
+    font-weight: bold;
+    display: block;
+    margin: 20px 0; }
+
+.progress_item .progress_bar .progress_line {
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  border-radius: 10px;
+  background: #c02109;
+  background: -webkit-gradient(linear, left top, right top, from(#eb6c16), to(#c02109));
+  background: linear-gradient(to right, #eb6c16 0%, #c02109 100%); }
+
+.progress_item:nth-child(odd) {
+  background-color: #fff; }
+
+.progress_item:nth-child(even) {
+  background-color: #e5e7eb; }
+
+.progress_item .progress_bar {
+  width: 100%;
+  height: 22px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #3e3f43;
+  background: -webkit-gradient(linear, left top, left bottom, from(#3e3f43), to(#28292c));
+  background: linear-gradient(to bottom, #3e3f43 0%, #28292c 100%);
+  position: relative;
+  text-align: center; }
+
+.slide-list {
+  padding: 15px 0;
+  font-style: italic; }
+  .slide-list .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 0; }
+    .slide-list .item:last-child {
+      border-bottom: none; }
+    .slide-list .item h4 {
+      font-size: 12px;
+      margin: 0; }
+    .slide-list .item .value {
+      font-size: 14px;
+      font-weight: bold;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+
+#editname_popup input[type=submit], #edittime_popup input[type=submit] {
+  display: block;
+  width: 100%; }
+
+#edittime_popup {
+  font-style: italic;
+  font-size: 14px; }
+  #edittime_popup input.time_input {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    width: 70px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic; }
 
 section.profile {
   background-image: url(../img/teacher_slide_bg.jpg);
   position: relative;
   text-align: center;
   padding-top: 50px;
+  margin-top: 140px;
   padding-bottom: 50px; }
+  section.profile .best-time {
+    padding-top: 20px; }
+  section.profile.ratings {
+    margin-top: 0px;
+    padding-top: 120px; }
+    section.profile.ratings h1 {
+      margin-bottom: 20px; }
+  section.profile.user-own {
+    margin-top: 200px;
+    padding-top: 110px; }
+    section.profile.user-own .name {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      text-align: left;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+    section.profile.user-own .button-skewed.red {
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 233px; }
+    section.profile.user-own .profile-nav .links {
+      width: 300px; }
   section.profile h1 {
+    font-size: 20px;
+    font-family: 'Gotham Pro';
+    font-weight: 900;
+    font-style: italic;
+    text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase; }
+  section.profile h2 {
     font-size: 20px;
     font-family: 'Gotham Pro';
     font-weight: 900;
@@ -33,7 +212,7 @@ section.profile {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      width: 225px; }
+      width: 200px; }
       section.profile .profile-nav .links a.nav-btn {
         display: block;
         border-radius: 50%;
@@ -55,21 +234,210 @@ section.profile {
         section.profile .profile-nav .links a.nav-btn.active {
           background-image: none;
           background-color: #a6a6a6; }
-        section.profile .profile-nav .links a.nav-btn.cal-nav:before {
-          content: url(../img/cal_nav.png);
-          position: absolute;
-          top: 50%; }
-        section.profile .profile-nav .links a.nav-btn.helm-nav:before {
-          content: url(../img/helm_nav.png); }
-        section.profile .profile-nav .links a.nav-btn.shop-nav:before {
-          content: url(../img/shop_nav.png); }
+      section.profile .profile-nav .links a.user-avatar {
+        width: 158px;
+        height: 158px;
+        position: absolute;
+        border-radius: 50%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: -54px;
+        border: 3px solid #cbcbcb;
+        background-color: #fff;
+        overflow: hidden; }
+
+section.slider-courses {
+  margin-top: 80px;
+  position: relative; }
+  section.slider-courses .counter {
+    position: absolute;
+    z-index: 100;
+    color: #828282;
+    left: 0;
+    top: 10px;
+    right: 0;
+    text-align: center; }
+    section.slider-courses .counter .current {
+      font-size: 48px;
+      font-family: 'Gotham Pro';
+      font-weight: 900;
+      font-style: italic;
+      text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
+      text-transform: uppercase;
+      color: white; }
+    section.slider-courses .counter .total {
+      font-size: 24px; }
+  section.slider-courses .slick-prof-courses {
+    margin-bottom: 100px; }
+    section.slider-courses .slick-prof-courses .slick-arrow {
+      top: 30px; }
+    section.slider-courses .slick-prof-courses .prof-slide {
+      text-align: center;
+      padding-top: 90px;
+      font-style: italic;
+      background-image: url(../img/teacher_slide_bg.jpg); }
+      section.slider-courses .slick-prof-courses .prof-slide h3 {
+        font-size: 24px;
+        font-weight: bold; }
+      section.slider-courses .slick-prof-courses .prof-slide h5 {
+        margin: 26px 0;
+        font-size: 14px; }
+        section.slider-courses .slick-prof-courses .prof-slide h5 span.red {
+          font-weight: bold;
+          font-size: 16px;
+          color: #e62911; }
+      section.slider-courses .slick-prof-courses .prof-slide .completed {
+        bottom: 65px;
+        z-index: 400;
+        left: 0;
+        right: 0;
+        margin: 0 auto; }
+        section.slider-courses .slick-prof-courses .prof-slide .completed .button-skewed.red {
+          background-image: url(../img/complete.png);
+          background-position: 20px center;
+          background-repeat: no-repeat; }
+        section.slider-courses .slick-prof-courses .prof-slide .completed .date {
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.1);
+          margin: 15px 0; }
+      section.slider-courses .slick-prof-courses .prof-slide p {
+        text-align: left;
+        font-size: 14px; }
+      section.slider-courses .slick-prof-courses .prof-slide .slide-body {
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+        padding-top: 26px;
+        padding-bottom: 36px; }
+        section.slider-courses .slick-prof-courses .prof-slide .slide-body .text_block_white {
+          background-image: -webkit-gradient(linear, left top, left bottom, from(#d73615), to(#ac0802));
+          background-image: linear-gradient(to bottom, #d73615 0%, #ac0802 100%);
+          padding: 20px;
+          position: relative;
+          text-align: left;
+          margin: 30px 0; }
+          section.slider-courses .slick-prof-courses .prof-slide .slide-body .text_block_white:before, section.slider-courses .slick-prof-courses .prof-slide .slide-body .text_block_white:after {
+            position: absolute;
+            font-size: 72px;
+            font-family: 'Gotham Pro';
+            font-weight: 900;
+            font-style: italic;
+            text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
+            text-transform: uppercase; }
+          section.slider-courses .slick-prof-courses .prof-slide .slide-body .text_block_white:before {
+            content: '\201C';
+            top: -47px;
+            left: 10px; }
+          section.slider-courses .slick-prof-courses .prof-slide .slide-body .text_block_white:after {
+            content: '\201D';
+            bottom: -70px;
+            right: 18px; }
+          section.slider-courses .slick-prof-courses .prof-slide .slide-body .text_block_white .tri {
+            position: absolute;
+            border: 20px solid #ac0802;
+            border-bottom: 20px solid transparent;
+            border-right: 20px solid transparent;
+            height: 0;
+            width: 0;
+            bottom: -20px;
+            left: 30px; }
+        section.slider-courses .slick-prof-courses .prof-slide .slide-body .coach-prof {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          margin-left: 10px;
+          margin-right: 10px; }
+          section.slider-courses .slick-prof-courses .prof-slide .slide-body .coach-prof .avatar-sm {
+            height: 46px;
+            width: 46px;
+            overflow: hidden;
+            border-radius: 50%; }
+            section.slider-courses .slick-prof-courses .prof-slide .slide-body .coach-prof .avatar-sm img {
+              width: 100%;
+              -o-object-fit: cover;
+                 object-fit: cover; }
+          section.slider-courses .slick-prof-courses .prof-slide .slide-body .coach-prof .name_desc {
+            margin-left: 20px;
+            text-align: left;
+            font-style: italic; }
+            section.slider-courses .slick-prof-courses .prof-slide .slide-body .coach-prof .name_desc .name {
+              font-weight: bold;
+              font-size: 16px; }
+            section.slider-courses .slick-prof-courses .prof-slide .slide-body .coach-prof .name_desc .desc {
+              font-size: 14px; }
 
 .popup {
   background-image: url(../img/teacher_slide_bg.jpg);
+  padding: 20px;
   border-radius: 8px;
   background-color: black;
   -webkit-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.004);
           box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.004); }
+
+.product-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
+  .product-grid .prod-card {
+    margin: 5px;
+    -ms-flex-preferred-size: calc(50% - 10px);
+        flex-basis: calc(50% - 10px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 3px solid #c4210c;
+    min-height: 180px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .product-grid .prod-card .price {
+      position: absolute;
+      font-size: 12px;
+      font-style: italic;
+      text-transform: uppercase;
+      bottom: 5px; }
+      .product-grid .prod-card .price span {
+        font-size: 24px;
+        font-weight: 900; }
+    .product-grid .prod-card.selected {
+      background: url(../img/polosa.png), -webkit-gradient(linear, left top, left bottom, from(#d73615), to(#ac0802));
+      background: url(../img/polosa.png), linear-gradient(to bottom, #d73615 0%, #ac0802 100%);
+      -webkit-filter: none;
+              filter: none; }
+    .product-grid .prod-card.blur {
+      -webkit-filter: grayscale(100%);
+              filter: grayscale(100%); }
+
+#btn-trade {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto; }
+
+#event_popup {
+  font-size: 14px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.702); }
+  #event_popup .value_block.time {
+    color: white;
+    font-weight: bold; }
+  #event_popup .button-skewed {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin: 0 auto;
+    display: block; }
+  #event_popup select {
+    font-size: 16px;
+    text-transform: capitalize; }
 
 .legend {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -259,5 +627,85 @@ section.profile {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%); }
+
+section.social {
+  padding: 45px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  section.social p {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.3); }
+  section.social .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 200px; }
+  section.social a.social-btn {
+    height: 42px;
+    -ms-flex-preferred-size: 42px;
+        flex-basis: 42px;
+    background-color: #fff;
+    display: block;
+    border-radius: 50%;
+    font-size: 21px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #191a1c; }
+    section.social a.social-btn:hover {
+      color: #191a1c;
+      text-decoration: none; }
+
+#rating_table {
+  margin-top: 40px; }
+  #rating_table .card {
+    background-image: url(../img/polosa.png);
+    background-color: #272728;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 8px;
+    margin-bottom: 10px; }
+    #rating_table .card.open {
+      background-color: #363737; }
+  #rating_table .card-header {
+    text-align: left;
+    padding: 20px;
+    border: 0;
+    background-color: transparent; }
+    #rating_table .card-header h5 {
+      font-family: 'Gotham Pro';
+      font-weight: 900;
+      font-style: italic;
+      text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
+      text-transform: uppercase;
+      text-transform: none; }
+    #rating_table .card-header button {
+      padding: 0; }
+  #rating_table .card-body {
+    padding: 20px;
+    padding-top: 0; }
+    #rating_table .card-body .slide-list {
+      padding: 0; }
 
 /*# sourceMappingURL=profile.css.map */
