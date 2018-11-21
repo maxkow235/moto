@@ -1,5 +1,8 @@
 $(document).ready(function() {
 	darkenNav()
+	//Test MENU Remove on production!!
+	initMenu()
+
 
 
 	$('#date-toggle').magnificPopup({
@@ -263,6 +266,36 @@ $(document).ready(function() {
 
 });
 
+//Remove on production
+function initMenu() {
+	var menu = [
+		"contacts",
+		"course_single",
+		"courses",
+		"equipment",
+		"infografic",
+		"instructors",
+		"login",
+		"motopark",
+		"motoservice",
+		"news",
+		"news_single",
+		"notifications",
+		"profile_calendar",
+		"profile_otheruser",
+		"profile_shop",
+		"profile_user",
+		"rating_table",
+		"register",
+		"testimonials"
+	]
+	$("ul.navbar-nav").html("")
+	
+	menu.forEach(function(v) {
+		var item = "<li class='nav-item'><a class='nav-link' href="+v+".html"+">"+v+" </a> </li>"
+		$("ul.navbar-nav").append(item)
+	})
+}
 
 function radioVal(val) {
 	document.querySelector('.input_field.range-slider .value_block .range-slider__value').innerHTML = val;
