@@ -142,6 +142,22 @@ section.period {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%); }
+  section.period.gal .date {
+    text-transform: none;
+    font-size: 12px; }
+  section.period.gal .point:after {
+    content: '';
+    z-index: -1;
+    border-right: 2px dotted rgba(255, 255, 255, 0.2);
+    position: absolute;
+    bottom: 0;
+    top: 85px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  section.period.gal .media-gallery {
+    margin-top: 20px;
+    margin-bottom: 20px; }
   section.period h2 {
     font-size: 16px;
     font-family: 'Gotham Pro';

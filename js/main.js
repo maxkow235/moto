@@ -105,34 +105,36 @@ $(document).ready(function() {
 
 
 	// the containers for all your galleries
-	if ($('.media-gallery .gallery') !== undefined) {
-		$('.media-gallery .gallery').magnificPopup({
-			delegate: 'a',
-			type: 'image',
-			tLoading: 'Loading image #%curr%...',
-			mainClass: 'mfp-img-mobile',
-			gallery: {
-				enabled: true,
-				navigateByImgClick: true,
-				preload: [0, 1]
-			},
-			image: {
-				tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+	$('.media-gallery .gallery').each(function() {
+		if ($(this) !== undefined) {
+			$(this).magnificPopup({
+				delegate: 'a',
+				type: 'image',
+				tLoading: 'Loading image #%curr%...',
+				mainClass: 'mfp-img-mobile',
+				gallery: {
+					enabled: true,
+					navigateByImgClick: true,
+					preload: [0, 1]
+				},
+				image: {
+					tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
 
-			},
-			callbacks: {
-				elementParse: function(item) {
-					// the class name
+				},
+				callbacks: {
+					elementParse: function(item) {
+						// the class name
 
-					if (item.el[0].className == 'video-link') {
-						item.type = 'iframe';
-					} else {
-						item.type = 'image';
+						if (item.el[0].className == 'video-link') {
+							item.type = 'iframe';
+						} else {
+							item.type = 'image';
+						}
 					}
-				}
-			},
-		});
-	}
+				},
+			});
+		}
+	})
 
 	$('#calendar').fullCalendar({
 		firstDay: 1,
@@ -278,6 +280,7 @@ function initMenu() {
 		"login",
 		"motopark",
 		"motoservice",
+		"mediagallery",
 		"news",
 		"news_single",
 		"notifications",
@@ -290,9 +293,9 @@ function initMenu() {
 		"testimonials"
 	]
 	$("ul.navbar-nav").html("")
-	
+
 	menu.forEach(function(v) {
-		var item = "<li class='nav-item'><a class='nav-link' href="+v+".html"+">"+v+" </a> </li>"
+		var item = "<li class='nav-item'><a class='nav-link' href=" + v + ".html" + ">" + v + " </a> </li>"
 		$("ul.navbar-nav").append(item)
 	})
 }
