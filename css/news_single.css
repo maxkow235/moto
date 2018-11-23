@@ -48,7 +48,7 @@ article .content {
     margin: 25px auto; }
   article .content h3 {
     font-size: 18px;
-    text-transform: capitalize;
+    text-transform: none;
     font-weight: 500; }
 
 .comment .comment_inner {

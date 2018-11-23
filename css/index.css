@@ -35,6 +35,18 @@ section.banner_main {
     text-transform: uppercase;
     font-style: italic; }
 
+div.point {
+  margin-bottom: 30px; }
+
+div.bg-wrap {
+  text-align: center;
+  background-image: url(../img/bg_equip.jpg);
+  background-size: cover;
+  background-position: top center; }
+
+section.teachers, section.motopark, section.equipment {
+  background-image: none !important; }
+
 section.about_school {
   padding: 25px 0;
   min-height: 765px;
@@ -61,7 +73,7 @@ section.courses {
   padding-top: 250px;
   padding-bottom: 150px; }
   section.courses .slick-arrow {
-    top: 38%; }
+    top: 34%; }
   section.courses .course-slide img {
     margin: 0 auto; }
   section.courses h3 {
@@ -76,6 +88,11 @@ section.courses {
             transform: translateX(-50%); }
   section.courses .point:after {
     top: 12px; }
+  section.courses p {
+    font-size: 14px;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 15px; }
   section.courses .button-skewed {
     background-color: #1a1b1d;
     padding: 8px 10px;
