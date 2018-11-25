@@ -9,7 +9,7 @@ $(document).ready(function() {
 		type: 'inline',
 		midClick: true,
 
-		closeBtnInside: false
+		closeBtnInside: true
 	})
 	$('#pizda').magnificPopup({
 		type: 'inline',
@@ -38,13 +38,13 @@ $(document).ready(function() {
 	$('#nameedit').magnificPopup({
 		type: 'inline',
 		midClick: true,
-		closeBtnInside: false
+		closeBtnInside: true
 	});
 
 	$('#timeedit').magnificPopup({
 		type: 'inline',
 		midClick: true,
-		closeBtnInside: false
+		closeBtnInside: true
 	});
 
 	//test popup sumbit REMOVE ON PRODUCTION
