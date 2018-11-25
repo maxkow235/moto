@@ -13,25 +13,23 @@ $(document).ready(function() {
 	})
 	$('#pizda').magnificPopup({
 		type: 'inline',
-		midClick: true
-
+		midClick: true,
+			closeBtnInside: true
 	})
 
 	$('#leave-feedback').magnificPopup({
 		type: 'inline',
 		midClick: true,
-
-		closeBtnInside: false
+			closeBtnInside: true
+		
 	})
 	$('#course-assign').magnificPopup({
 		type: 'inline',
 		midClick: true,
-		closeBtnInside: false
+			closeBtnInside: true
 	})
 
-	$('#rating_table .card').click(function() {
-		$(this).toggleClass('open')
-	})
+	
 
 	$('input.time_input').inputmask("99:99");
 
@@ -190,7 +188,7 @@ $(document).ready(function() {
 					src: '#event_popup',
 				},
 				type: 'inline',
-				closeBtnInside: false
+				closeBtnInside: true
 			});
 
 
