@@ -280,7 +280,6 @@ function initMenu() {
 		"login",
 		"motopark",
 		"motoservice",
-		"mediagallery",
 		"news",
 		"news_single",
 		"notifications",
