@@ -24,6 +24,8 @@ section.infografic {
     bottom: -100px;
     left: 0;
     right: 0; }
+  section.infografic .bike img {
+    margin-bottom: 15px; }
   section.infografic .info-card.track {
     position: relative;
     z-index: 200;
