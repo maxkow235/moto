@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/news_single.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
   <body>
@@ -19,7 +20,7 @@
           <div class="notification">2</div>
         </div>
         <button class="navbar-toggler collapsed" type="button"  data-target="#navbarContent">
-         <span class="toggle-icon"></span>
+        <span class="toggle-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarContent">
           <ul class="navbar-nav mr-auto">
@@ -63,15 +64,15 @@
               </div>
             </div>
             <div class="gallery">
-              <a href="https://www.youtube.com/watch?v=NpEaa2P7qZI" class="video-link"><img src="img/video_thumb.jpg" alt=""></a>
-              <a href="https://www.w3schools.com/w3css/img_lights.jpg"><img src="https://www.w3schools.com/w3css/img_lights.jpg" alt=""></a>
-              <a href="https://www.w3schools.com/w3css/img_lights.jpg"><img src="https://www.w3schools.com/w3css/img_lights.jpg" alt=""></a>
-              <a href="https://www.w3schools.com/w3css/img_lights.jpg"><img src="https://www.w3schools.com/w3css/img_lights.jpg" alt=""></a>
-              <a href="https://www.w3schools.com/w3css/img_lights.jpg"><img src="https://www.w3schools.com/w3css/img_lights.jpg" alt=""></a>
-              <a href="https://www.w3schools.com/w3css/img_lights.jpg"><img src="https://www.w3schools.com/w3css/img_lights.jpg" alt=""></a>
-              <a href="https://www.w3schools.com/css/rock600x400.jpg"><img src="https://www.w3schools.com/css/rock600x400.jpg" alt=""></a>
-              <a href="https://www.w3schools.com/css/rock600x400.jpg"><img src="https://www.w3schools.com/css/rock600x400.jpg" alt=""></a>
-              <a href="https://www.w3schools.com/css/rock600x400.jpg"><img src="https://www.w3schools.com/css/rock600x400.jpg" alt=""></a>
+              <a href="https://www.youtube.com/watch?v=NpEaa2P7qZI" class="video-link" data-fancybox="gallery1"><img src="img/video_thumb.jpg" alt=""></a>
+              <a href="https://www.w3schools.com/w3css/img_lights.jpg" data-fancybox="gallery1"><img src="https://www.w3schools.com/w3css/img_lights.jpg" alt=""></a>
+              <a href="https://www.w3schools.com/w3css/img_lights.jpg" data-fancybox="gallery1"><img src="https://www.w3schools.com/w3css/img_lights.jpg" alt=""></a>
+              <a href="https://www.w3schools.com/w3css/img_lights.jpg" data-fancybox="gallery1"><img src="https://www.w3schools.com/w3css/img_lights.jpg" alt=""></a>
+              <a href="https://www.w3schools.com/w3css/img_lights.jpg" data-fancybox="gallery1"><img src="https://www.w3schools.com/w3css/img_lights.jpg" alt=""></a>
+              <a href="https://www.w3schools.com/w3css/img_lights.jpg" data-fancybox="gallery1"><img src="https://www.w3schools.com/w3css/img_lights.jpg" alt=""></a>
+              <a href="https://www.w3schools.com/css/rock600x400.jpg" data-fancybox="gallery1"><img src="https://www.w3schools.com/css/rock600x400.jpg" alt=""></a>
+              <a href="https://www.w3schools.com/css/rock600x400.jpg" data-fancybox="gallery1"><img src="https://www.w3schools.com/css/rock600x400.jpg" alt=""></a>
+              <a href="https://www.w3schools.com/css/rock600x400.jpg" data-fancybox="gallery1"><img src="https://www.w3schools.com/css/rock600x400.jpg" alt=""></a>
             </div>
           </div>
         </div>
@@ -80,13 +81,11 @@
     <section class="comment-form">
       <div class="container">
         <h2>Оставить комментарий</h2>
-
         <form action="">
           <textarea name="comment" id="comment_input" cols="30" rows="10" placeholder="Введите комментарий..." required maxlength="256"></textarea>
           <div class="sym-left">Осталось <span id="counter"></span> символов.</div>
           <input type="submit" value="Отправить" class="button-skewed red">
         </form>
-
       </div>
     </section>
     <section class="comments">
@@ -109,7 +108,7 @@
             </div>
           </div>
           <div class="comment_inner reply">
-             <div class="comment_head">
+            <div class="comment_head">
               <div class="user">
                 <div class="avatar"><img src="img/avatar_comment.jpg" alt=""></div>
                 <div class="info">
@@ -120,12 +119,12 @@
               <a class="reply-btn" href="#"></a>
             </div>
             <div class="comment_body">
-             
+              
               <p><span class="reply-to">@Борис Бритва, </span>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
             </div>
           </div>
-           <div class="comment_inner reply">
-             <div class="comment_head">
+          <div class="comment_inner reply">
+            <div class="comment_head">
               <div class="user">
                 <div class="avatar"><img src="img/avatar_comment.jpg" alt=""></div>
                 <div class="info">
@@ -136,7 +135,7 @@
               <a class="reply-btn" href="#"></a>
             </div>
             <div class="comment_body">
-             
+              
               <p><span class="reply-to">@Борис Бритва, </span>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
             </div>
           </div>
@@ -154,14 +153,15 @@
       </div>
     </footer>
     <script src="js/jquery.min.js"></script>
-        <script src="js/slick.min.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/moment.min.js"></script>
-        <script src="js/fullcalendar.min.js"></script>
-         <script src="js/jquery.inputmask.bundle.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="js/main.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/fullcalendar.min.js"></script>
+    <script src="js/jquery.inputmask.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/main.js"></script>
     
   </body>
 </html>

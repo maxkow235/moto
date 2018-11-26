@@ -14,22 +14,22 @@ $(document).ready(function() {
 	$('#pizda').magnificPopup({
 		type: 'inline',
 		midClick: true,
-			closeBtnInside: true
+		closeBtnInside: true
 	})
 
 	$('#leave-feedback').magnificPopup({
 		type: 'inline',
 		midClick: true,
-			closeBtnInside: true
-		
+		closeBtnInside: true
+
 	})
 	$('#course-assign').magnificPopup({
 		type: 'inline',
 		midClick: true,
-			closeBtnInside: true
+		closeBtnInside: true
 	})
 
-	
+
 
 	$('input.time_input').inputmask("99:99");
 
@@ -101,38 +101,26 @@ $(document).ready(function() {
 	})
 
 
+	
+	$(".media-gallery .gallery a").fancybox({
+		
+		smallBtn: "true",
+		thumbs: {
+			autoStart: true,
+			axis: 'x'
+		},
+		smallBtn: "true",
+		autoDimensions: false,
+        height: 300,
+        width: 400
+  // Should display toolbar (buttons at the top)
+  // Can be true, false, "auto"
+  // If "auto" - will be automatically hidden if "smallBtn" is enabled
+ 
 
-	// the containers for all your galleries
-	$('.media-gallery .gallery').each(function() {
-		if ($(this) !== undefined) {
-			$(this).magnificPopup({
-				delegate: 'a',
-				type: 'image',
-				tLoading: 'Loading image #%curr%...',
-				mainClass: 'mfp-img-mobile',
-				gallery: {
-					enabled: true,
-					navigateByImgClick: true,
-					preload: [0, 1]
-				},
-				image: {
-					tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-
-				},
-				callbacks: {
-					elementParse: function(item) {
-						// the class name
-
-						if (item.el[0].className == 'video-link') {
-							item.type = 'iframe';
-						} else {
-							item.type = 'image';
-						}
-					}
-				},
-			});
-		}
-	})
+	});
+	
+	
 
 	$('#calendar').fullCalendar({
 		firstDay: 1,
