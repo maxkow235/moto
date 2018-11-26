@@ -110,13 +110,18 @@ $(document).ready(function() {
 			axis: 'x'
 		},
 		smallBtn: "true",
-		autoDimensions: false
+		autoDimensions: false,
+        height: 300,
+        width: 400
+  		
   // Should display toolbar (buttons at the top)
   // Can be true, false, "auto"
   // If "auto" - will be automatically hidden if "smallBtn" is enabled
  
 
 	});
+
+	
 	
 	
 
