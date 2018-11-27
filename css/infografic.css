@@ -19,24 +19,20 @@ section.infografic {
     margin-top: 15px; }
   section.infografic .point {
     margin: 30px auto; }
-  section.infografic img.track {
-    position: absolute;
-    bottom: -100px;
-    left: 0;
-    right: 0; }
   section.infografic .bike img {
     margin-bottom: 15px; }
   section.infografic .info-card.track {
     position: relative;
     z-index: 200;
-    margin-top: 300px;
-    margin-bottom: 100px; }
+    margin-top: 30px; }
   section.infografic .item {
     margin-top: 40px;
     position: relative; }
   section.infografic img {
     margin: 0 auto;
     width: 100%; }
+    section.infografic img.biker {
+      width: 60%; }
   section.infografic .flag-point {
     background-color: #313131;
     border: 2px solid white;
