@@ -41,7 +41,6 @@ div.point {
 div.bg-wrap {
   text-align: center;
   background-image: url(../img/bg_equip.jpg);
-  background-size: cover;
   background-position: top center; }
 
 section.teachers, section.motopark, section.equipment {
