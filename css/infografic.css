@@ -29,10 +29,10 @@ section.infografic {
     margin-top: 40px;
     position: relative; }
   section.infografic img {
-    margin: 0 auto;
-    width: 100%; }
-    section.infografic img.biker {
-      width: 60%; }
+    margin: 0 auto; }
+    @media (max-width: 400px) {
+      section.infografic img:not(.biker) {
+        width: 100%; } }
   section.infografic .flag-point {
     background-color: #313131;
     border: 2px solid white;

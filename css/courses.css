@@ -113,12 +113,12 @@ section.course-single {
   padding-bottom: 10px; }
   section.course-single h4 {
     font-size: 18px;
+    margin-top: 70px;
     font-family: 'Gotham Pro';
     font-weight: 900;
     font-style: italic;
     text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
-    text-transform: uppercase;
-    margin-top: 70px; }
+    text-transform: uppercase; }
   section.course-single .course-circle {
     background-color: #c01606;
     display: flex;
@@ -194,7 +194,11 @@ section.course-single {
       margin-top: 20px; }
       section.course-single .info-card .price h4 {
         font-size: 36px;
-        font-weight: 900; }
+        font-weight: 900;
+        padding-bottom: 20px;
+        margin-bottom: 0;
+        margin-top: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
         section.course-single .info-card .price h4 span {
           font-size: 16px;
           font-weight: normal;

@@ -92,14 +92,21 @@ section.courses {
     text-align: left;
     margin-top: 15px;
     margin-bottom: 15px; }
+  section.courses .buttons {
+    position: relative;
+    top: -20px; }
+    section.courses .buttons a {
+      display: block;
+      margin: 0 auto; }
   section.courses .button-skewed {
     background-color: #1a1b1d;
     padding: 8px 10px;
-    font-style: normal; }
+    font-style: normal;
+    margin-bottom: 15px; }
     section.courses .button-skewed.red {
       border: none;
       position: relative;
-      top: -18px;
+      margin-top: 20px;
       background-color: #a61904; }
   section.courses .info-card {
     min-height: 256px;
