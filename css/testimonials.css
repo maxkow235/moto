@@ -22,4 +22,22 @@ section.testimonials {
   font-weight: 300;
   font-size: 14px; }
 
+.course-select div.prettydropdown > ul {
+  padding: 0; }
+
+.fl-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap; }
+
 /*# sourceMappingURL=testimonials.css.map */

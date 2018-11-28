@@ -3,7 +3,13 @@ $(document).ready(function() {
 	//Test MENU Remove on production!!
 	initMenu()
 
-
+	$(document).ready(function() {
+  // Initiate Pretty Dropdowns
+  		$('.custom-dropdown select').prettyDropdown({
+  			customClass: 'arrow triangle small',
+    		height: 30
+  		});
+	});
 
 	$('#date-toggle').magnificPopup({
 		type: 'inline',
@@ -11,11 +17,7 @@ $(document).ready(function() {
 
 		closeBtnInside: true
 	})
-	$('#pizda').magnificPopup({
-		type: 'inline',
-		midClick: true,
-		closeBtnInside: true
-	})
+	
 
 	$('#leave-feedback').magnificPopup({
 		type: 'inline',
@@ -28,7 +30,27 @@ $(document).ready(function() {
 		midClick: true,
 		closeBtnInside: true
 	})
+	$.extend(jQuery.validator.messages, {
+		required: 'Поле обязательное',
+		remote: "Please fix this field.",
+	});
 
+	$.validator.addMethod("phoneNum", function(phone_number, element) {
+		phone_number = phone_number.replace(/\s+/g, "");
+		return this.optional(element) || phone_number.length > 9 &&
+			phone_number.match(/^\+380\d{3}\d{2}\d{2}\d{2}$/);
+	}, "Телефон введен неверно");
+	
+	$("#reg_form").validate({
+		rules: {
+			tel: {
+				required: true,
+				phoneNum: true
+			}
+		},
+		errorElement: 'span',
+		errorLabelContainer: 'label[for=tel]'
+	});
 
 
 	$('input.time_input').inputmask("99:99");
@@ -101,9 +123,9 @@ $(document).ready(function() {
 	})
 
 
-	
+
 	$(".media-gallery .gallery a").fancybox({
-		
+
 		smallBtn: "true",
 		thumbs: {
 			autoStart: true,
@@ -111,19 +133,17 @@ $(document).ready(function() {
 		},
 		smallBtn: "true",
 		autoDimensions: false,
-        height: 300,
-        width: 400
-  		
-  // Should display toolbar (buttons at the top)
-  // Can be true, false, "auto"
-  // If "auto" - will be automatically hidden if "smallBtn" is enabled
- 
+		height: 300,
+		width: 400
+
+		// Should display toolbar (buttons at the top)
+		// Can be true, false, "auto"
+		// If "auto" - will be automatically hidden if "smallBtn" is enabled
+
 
 	});
 
-	
-	
-	
+
 
 	$('#calendar').fullCalendar({
 		firstDay: 1,

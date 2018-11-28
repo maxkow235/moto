@@ -35,7 +35,9 @@ body {
     width: 260px;
     margin: 0 auto;
     position: relative;
-    padding-bottom: 10px; }
+    padding-bottom: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px; }
     .tools .search-form .border-gray {
       position: absolute;
       bottom: 0;
