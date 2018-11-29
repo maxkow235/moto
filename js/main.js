@@ -38,7 +38,7 @@ $(document).ready(function() {
 	$.validator.addMethod("phoneNum", function(phone_number, element) {
 		phone_number = phone_number.replace(/\s+/g, "");
 		return this.optional(element) || phone_number.length > 9 &&
-			phone_number.match(/^\+380\d{3}\d{2}\d{2}\d{2}$/);
+			phone_number.match(/^\+380\(\d{2}\)\-\d{3}\-\d{2}\-\d{2}$/);
 	}, "Телефон введен неверно");
 	
 	$("#reg_form").validate({
