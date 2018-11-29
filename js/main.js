@@ -306,6 +306,10 @@ function initMenu() {
 		var item = "<li class='nav-item'><a class='nav-link' href=" + v + ".html" + ">" + v + " </a> </li>"
 		$("ul.navbar-nav").append(item)
 	})
+
+	$("input[type=tel]").inputmask("+380(99)-999-99-99",{
+		showMaskOnHover:false
+	})
 }
 
 function radioVal(val) {

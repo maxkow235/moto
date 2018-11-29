@@ -27,6 +27,8 @@ section.equipment.motopark {
     padding: 20px;
     position: relative;
     text-align: left;
+    font-style: italic;
+    font-weight: normal;
     margin: 30px 0; }
     .from-teacher .text_block_white:before, .from-teacher .text_block_white:after {
       position: absolute;

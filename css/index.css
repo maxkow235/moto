@@ -46,6 +46,9 @@ div.bg-wrap {
 section.teachers, section.motopark, section.equipment {
   background-image: none !important; }
 
+section.motopark {
+  padding-top: 25px; }
+
 section.about_school {
   padding: 25px 0;
   min-height: 765px;
@@ -69,8 +72,8 @@ section.about_school {
 
 section.courses {
   text-align: center;
-  padding-top: 250px;
-  padding-bottom: 120px; }
+  padding-top: 220px;
+  padding-bottom: 20px; }
   section.courses .slick-arrow {
     top: 34%; }
   section.courses .course-slide img {
