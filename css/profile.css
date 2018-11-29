@@ -123,12 +123,13 @@
     .slide-list .item .value {
       font-size: 14px;
       font-weight: bold;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between; }
+      .slide-list .item .value.time span {
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.5);
+        font-weight: normal; }
 
 #editname_popup input[type=submit], #edittime_popup input[type=submit] {
   display: block;
@@ -322,7 +323,7 @@ section.slider-courses {
             background-repeat: no-repeat; }
         section.slider-courses .slick-prof-courses .prof-slide .completed .date {
           font-size: 14px;
-          color: rgba(255, 255, 255, 0.1);
+          color: rgba(255, 255, 255, 0.5);
           margin: 15px 0; }
       section.slider-courses .slick-prof-courses .prof-slide p {
         text-align: left;

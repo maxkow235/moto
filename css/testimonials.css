@@ -25,7 +25,7 @@ section.testimonials {
 .course-select div.prettydropdown > ul {
   padding: 0; }
 
-.fl-info {
+section.testimonials .info-card .fl-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,5 +39,14 @@ section.testimonials {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap; }
+  section.testimonials .info-card .fl-info.course .date {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4); }
+  section.testimonials .info-card .fl-info.course h5 {
+    font-size: 14px; }
+  section.testimonials .info-card .fl-info.name h5 {
+    font-size: 15px; }
+  section.testimonials .info-card .fl-info h5 {
+    margin-bottom: 0; }
 
 /*# sourceMappingURL=testimonials.css.map */
