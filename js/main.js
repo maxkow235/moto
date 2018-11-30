@@ -4,11 +4,11 @@ $(document).ready(function() {
 	initMenu()
 
 	$(document).ready(function() {
-  // Initiate Pretty Dropdowns
-  		$('.custom-dropdown select').prettyDropdown({
-  			customClass: 'arrow triangle small',
-    		height: 30
-  		});
+		// Initiate Pretty Dropdowns
+		$('.custom-dropdown select').prettyDropdown({
+			customClass: 'arrow triangle small',
+			height: 30
+		});
 	});
 
 	$('#date-toggle').magnificPopup({
@@ -17,7 +17,7 @@ $(document).ready(function() {
 
 		closeBtnInside: true
 	})
-	
+
 
 	$('#leave-feedback').magnificPopup({
 		type: 'inline',
@@ -40,7 +40,7 @@ $(document).ready(function() {
 		return this.optional(element) || phone_number.length > 9 &&
 			phone_number.match(/^\+380\(\d{2}\)\-\d{3}\-\d{2}\-\d{2}$/);
 	}, "Телефон введен неверно");
-	
+
 	$("#reg_form").validate({
 		rules: {
 			tel: {
@@ -134,8 +134,8 @@ $(document).ready(function() {
 		smallBtn: "true",
 		autoDimensions: false,
 		height: 300,
-		width: 400
-
+		width: 400,
+		
 		// Should display toolbar (buttons at the top)
 		// Can be true, false, "auto"
 		// If "auto" - will be automatically hidden if "smallBtn" is enabled
@@ -307,8 +307,8 @@ function initMenu() {
 		$("ul.navbar-nav").append(item)
 	})
 
-	$("input[type=tel]").inputmask("+380(99)-999-99-99",{
-		showMaskOnHover:false
+	$("input[type=tel]").inputmask("+380(99)-999-99-99", {
+		showMaskOnHover: false
 	})
 }
 
