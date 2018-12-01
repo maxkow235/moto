@@ -33,6 +33,10 @@ section.infografic {
     @media (max-width: 400px) {
       section.infografic img:not(.biker) {
         width: 100%; } }
+    section.infografic img.track {
+      width: auto; }
+    section.infografic img.helmet {
+      width: auto; }
   section.infografic .flag-point {
     background-color: #313131;
     border: 2px solid white;

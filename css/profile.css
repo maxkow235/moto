@@ -467,7 +467,8 @@ section.slider-courses {
 
 .legend {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  padding-top: 20px; }
+  padding-top: 20px;
+  margin-top: 40px; }
 
 #calendar .fc-basic-view .fc-day-top.past .fc-day-number {
   position: relative;
@@ -548,13 +549,16 @@ section.slider-courses {
     text-transform: uppercase;
     font-weight: normal; }
   #calendar .fc-toolbar.fc-header-toolbar {
-    margin: 25px 0px;
+    position: relative;
+    width: 250px;
+    margin: 25px auto;
+    margin-bottom: 35px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
@@ -573,10 +577,20 @@ section.slider-courses {
     height: auto;
     text-shadow: none;
     -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    top: -3px;
+    border: 0;
+    position: absolute;
     box-shadow: none;
     background: transparent;
     color: #fff;
     font-size: 18px; }
+    #calendar .fc-header-toolbar button.fc-prev-button {
+      left: 0; }
+    #calendar .fc-header-toolbar button.fc-next-button {
+      right: 0; }
+  #calendar .fc-button-group {
+    margin-left: 0; }
 
 .fc-clear, .fc-center {
   display: none; }
@@ -733,5 +747,33 @@ section.social {
     padding-top: 0; }
     #rating_table .card-body .slide-list {
       padding: 0; }
+
+.fc-view > table {
+  -webkit-transform: rotate(-90deg) rotateY(180deg);
+          transform: rotate(-90deg) rotateY(180deg);
+  transform: rotate(-90deg) rotateY(180deg);
+  width: 280px !important;
+  height: 120px;
+  margin: 0 auto; }
+
+.fc-day-top span {
+  -webkit-transform: rotate(-90deg) rotateY(180deg);
+          transform: rotate(-90deg) rotateY(180deg); }
+
+.fc .fc-day-header {
+  -webkit-transform: rotate(-90deg) rotateY(180deg);
+          transform: rotate(-90deg) rotateY(180deg); }
+
+.fc-row {
+  height: 40px !important; }
+
+.day-link {
+  color: white; }
+  .day-link:hover {
+    color: white; }
+
+.fc-scroller {
+  height: auto !important;
+  overflow: hidden !important; }
 
 /*# sourceMappingURL=profile.css.map */

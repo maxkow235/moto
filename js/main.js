@@ -2,7 +2,7 @@ $(document).ready(function() {
 	darkenNav()
 	//Test MENU Remove on production!!
 	initMenu()
-
+	setDataPicker()
 	$(document).ready(function() {
 		// Initiate Pretty Dropdowns
 		$('.custom-dropdown select').prettyDropdown({
@@ -135,7 +135,7 @@ $(document).ready(function() {
 		autoDimensions: false,
 		height: 300,
 		width: 400,
-		
+
 		// Should display toolbar (buttons at the top)
 		// Can be true, false, "auto"
 		// If "auto" - will be automatically hidden if "smallBtn" is enabled
@@ -148,10 +148,11 @@ $(document).ready(function() {
 	$('#calendar').fullCalendar({
 		firstDay: 1,
 		fixedWeekCount: false,
-		aspectRatio: 0.9,
+		aspectRatio: 0,
+		contentHeight: 300,
+		height: 500,
+		defaultView: 'month',
 
-		// editable: true,
-		// selectable: true,
 		events: [
 
 
@@ -184,27 +185,31 @@ $(document).ready(function() {
 			$('.fc-day-top').filter(function() {
 				return $(this).data("date") == event_date
 			}).addClass(event_type);
-			// $('.fc-day-top').data('date', event_date).
-			// console.log($('.fc-day-top').data('date', event_date));
+
 			console.log(event_date);
-			// console.log(event_type);
+
+
+
 		},
-		dayClick: function(date, jsEvent, view) {
+		viewRender: function() {
+			$(".fc-day-top > span").wrap(`<a href="#event_popup" class="day-link"></a>`);
+			$(".fc-day-top:not(.not_available) a.day-link").click(function(e) {
+				e.preventDefault();
+				var date = $($(this).parent()).data("date");
+				
+				var popup = $(this).attr("href");
+				$.magnificPopup.open({
 
+					items: {
+						src: popup,
+					},
+					type: 'inline',
+					closeBtnInside: true
+				});
 
-
-			$.magnificPopup.open({
-
-				items: {
-					src: '#event_popup',
-				},
-				type: 'inline',
-				closeBtnInside: true
 			});
-
-
-
 		},
+
 		monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август',
 			'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
 		],
@@ -219,6 +224,8 @@ $(document).ready(function() {
 			today: "Сегодня"
 		}
 	})
+	//New Event
+
 
 
 	//init comment counter
@@ -226,10 +233,10 @@ $(document).ready(function() {
 	$('.comment-form textarea').keyup(function() {
 		textCounter(this, 'counter', $(this).attr('maxlength'));
 	})
-
+	radioVal($(".range-slider__range").val())
 	//range show value
 	$(".range-slider__range").on("input change", function() {
-		radioVal($(this).val())
+		radioVal($(".range-slider__range").val())
 	})
 
 	$(document).scroll(function() {
@@ -240,37 +247,43 @@ $(document).ready(function() {
 	//picker functionality 
 	$('#date-toggle').click(function() {
 		if (!$('.picker').hasClass('slick-initialized')) {
-			$('.picker').slick({
-				nextArrow: '<button class="rarr"></button>',
-				prevArrow: '<button class="larr"></button>',
-				cssEase: 'none',
-				draggable: false,
-				swipe: false,
-				speed: 1,
-				responsive: [{
-						breakpoint: 1024,
-						settings: {
-							slidesToShow: 1,
-							slidesToScroll: 1
+
+			$('.picker').each(function() {
+				var current = $(this).find(".active").index();
+				$(this).slick({
+					nextArrow: '<button class="rarr"></button>',
+					prevArrow: '<button class="larr"></button>',
+					cssEase: 'none',
+					draggable: false,
+					swipe: false,
+					initialSlide: current,
+					speed: 1,
+
+					responsive: [{
+							breakpoint: 1024,
+							settings: {
+								slidesToShow: 1,
+								slidesToScroll: 1
+							}
+						}, {
+							breakpoint: 600,
+							settings: {
+								slidesToShow: 1,
+								slidesToScroll: 1
+							}
+						}, {
+							breakpoint: 480,
+							settings: {
+								slidesToShow: 1,
+								slidesToScroll: 1
+							}
 						}
-					}, {
-						breakpoint: 600,
-						settings: {
-							slidesToShow: 1,
-							slidesToScroll: 1
-						}
-					}, {
-						breakpoint: 480,
-						settings: {
-							slidesToShow: 1,
-							slidesToScroll: 1
-						}
-					}
-					// You can unslick at a given breakpoint now by adding:
-					// settings: "unslick"
-					// instead of a settings object
-				]
-			})
+						// You can unslick at a given breakpoint now by adding:
+						// settings: "unslick"
+						// instead of a settings object
+					]
+				})
+			});
 		}
 	})
 
@@ -312,8 +325,17 @@ function initMenu() {
 	})
 }
 
+
+
 function radioVal(val) {
 	document.querySelector('.input_field.range-slider .value_block .range-slider__value').innerHTML = val;
+}
+
+function setDataPicker() {
+	var d = new Date();
+
+	$(`.picker.months [data-month=${d.getMonth()}]`).addClass('active');
+	$(`.picker.yearss [data-year=${d.getFullYear()}]`).addClass('active');
 }
 
 function textCounter(field, field2, maxlimit) {
