@@ -31,10 +31,19 @@ section.main {
     position: relative;
     font-style: italic; }
     section.main .notif-card .head {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-flow: row nowrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap;
       margin-bottom: 20px; }
     section.main .notif-card .notif_id, section.main .notif-card span.red {
       font-size: 14px;
@@ -56,6 +65,7 @@ div.point {
   position: absolute;
   top: 64px;
   left: 50%;
-  transform: translateX(-50%); }
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
 
 /*# sourceMappingURL=notifications.css.map */
