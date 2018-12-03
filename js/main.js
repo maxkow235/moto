@@ -148,10 +148,10 @@ $(document).ready(function() {
 
 	$('#calendar').fullCalendar({
 		firstDay: 1,
-		fixedWeekCount: false,
-		weekMode:'liquid',
+		fixedWeekCount: true,
+		weekMode:'fixed',
 		aspectRatio: 0,
-		contentHeight: 240,
+		contentHeight: 250,
 		height:300,
 		defaultView: 'month',
 
