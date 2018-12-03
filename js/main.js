@@ -233,11 +233,14 @@ $(document).ready(function() {
 	$('.comment-form textarea').keyup(function() {
 		textCounter(this, 'counter', $(this).attr('maxlength'));
 	})
+	
 	radioVal($(".range-slider__range").val())
+
 	//range show value
 	$(".range-slider__range").on("input change", function() {
 		radioVal($(".range-slider__range").val())
 	})
+
 
 	$(document).scroll(function() {
 		darkenNav();
@@ -328,7 +331,7 @@ function initMenu() {
 
 
 function radioVal(val) {
-	document.querySelector('.input_field.range-slider .value_block .range-slider__value').innerHTML = val;
+	$('.input_field.range-slider .value_block .range-slider__value').html(val)
 }
 
 function setDataPicker() {

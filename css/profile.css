@@ -316,8 +316,8 @@ section.slider-courses {
             display: inline-block;
             position: relative;
             margin-right: 10px;
-            -webkit-transform: skew(20deg);
-                    transform: skew(20deg);
+            -webkit-transform: skew(14deg);
+                    transform: skew(14deg);
             background-image: url(../img/complete.png);
             background-position: center center;
             background-repeat: no-repeat; }
@@ -775,5 +775,4 @@ section.social {
 .fc-scroller {
   height: auto !important;
   overflow: hidden !important; }
-
 /*# sourceMappingURL=profile.css.map */
