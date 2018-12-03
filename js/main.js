@@ -149,9 +149,10 @@ $(document).ready(function() {
 	$('#calendar').fullCalendar({
 		firstDay: 1,
 		fixedWeekCount: false,
+		weekMode:'liquid',
 		aspectRatio: 0,
-		contentHeight: 300,
-		height: 500,
+		contentHeight: 240,
+		height:300,
 		defaultView: 'month',
 
 		events: [

@@ -753,7 +753,7 @@ section.social {
           transform: rotate(-90deg) rotateY(180deg);
   transform: rotate(-90deg) rotateY(180deg);
   width: 280px !important;
-  height: 120px;
+  height: 100px !important;
   margin: 0 auto; }
 
 .fc-day-top span {
@@ -773,7 +773,6 @@ section.social {
     color: white; }
 
 .fc-scroller {
-  height: auto !important;
   overflow: hidden !important; }
 
 /*# sourceMappingURL=profile.css.map */
