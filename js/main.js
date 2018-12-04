@@ -73,25 +73,15 @@ $(document).ready(function() {
 		e.preventDefault()
 		$('#course-popup').addClass('submitted');
 	})
-
-	const targetElement = document.querySelector("#navbarContent");
- 
-
-	
+	$('body').wrapInner('<div id="wrap"></div>');
 	$('.navbar-toggler').click(function() {
 		darkenNav()
 		$('nav.navbar-dark.bg-dark').toggleClass('darken');
-		
- 
+		$('div#wrap').toggleClass('freezePage');
+		$('html').toggleClass('freezePage');
 
 		$(this).toggleClass('collapsed');
-		$(targetElement).toggleClass('show');
-		if($(targetElement).hasClass('show')) {
-		bodyScrollLock.disableBodyScroll();
-	}
-	else {
-			bodyScrollLock.enableBodyScroll();
-	}
+		$($(this).data('target')).toggleClass('show');
 
 
 	});
