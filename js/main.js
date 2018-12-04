@@ -74,30 +74,24 @@ $(document).ready(function() {
 		$('#course-popup').addClass('submitted');
 	})
 
+	const targetElement = document.querySelector("#navbarContent");
+ 
+
+	
 	$('.navbar-toggler').click(function() {
 		darkenNav()
 		$('nav.navbar-dark.bg-dark').toggleClass('darken');
-		$('body').toggleClass('freezePage');
-		$('html').toggleClass('freezePage');
-		if($("body").hasClass('freezePage')) {
-			$("body").on('touchmove', function(event) {
-				event.comesFromScrollable = true;
-				//when you have containers that are srollable but 
-				//doesn't have enough content to scroll sometimes:
-				//event.comesFromScrollable = el.offsetHeight < el.scrollHeight;
-			})
+		
+ 
 
-			$(document).on('touchmove', function(event) {
-				if (!event.comesFromScrollable) {
-					event.preventDefault()
-				}
-			})
-
-		} else {
-
-		}
 		$(this).toggleClass('collapsed');
-		$($(this).data('target')).toggleClass('show');
+		$(targetElement).toggleClass('show');
+		if($(targetElement).hasClass('show')) {
+		bodyScrollLock.disableBodyScroll();
+	}
+	else {
+			bodyScrollLock.enableBodyScroll();
+	}
 
 
 	});
