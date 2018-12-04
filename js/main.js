@@ -79,6 +79,23 @@ $(document).ready(function() {
 		$('nav.navbar-dark.bg-dark').toggleClass('darken');
 		$('body').toggleClass('freezePage');
 		$('html').toggleClass('freezePage');
+		if($("body").hasClass('freezePage')) {
+			$("body").on('touchmove', function(event) {
+				event.comesFromScrollable = true;
+				//when you have containers that are srollable but 
+				//doesn't have enough content to scroll sometimes:
+				//event.comesFromScrollable = el.offsetHeight < el.scrollHeight;
+			})
+
+			$(document).on('touchmove', function(event) {
+				if (!event.comesFromScrollable) {
+					event.preventDefault()
+				}
+			})
+
+		} else {
+
+		}
 		$(this).toggleClass('collapsed');
 		$($(this).data('target')).toggleClass('show');
 
@@ -146,6 +163,32 @@ $(document).ready(function() {
 		// If "auto" - will be automatically hidden if "smallBtn" is enabled
 
 
+	});
+
+	jQuery(document).ready(function() {
+		var field = $(".searchMe");
+		field.keypress(function() {
+			$("#modal").show();
+			$('.content').addClass('no-scroll')
+			$(".result").show();
+			this.$scrollableEl.on('touchmove', function(event) {
+				event.comesFromScrollable = true;
+				//when you have containers that are srollable but 
+				//doesn't have enough content to scroll sometimes:
+				//event.comesFromScrollable = el.offsetHeight < el.scrollHeight;
+			})
+
+			$document.on('touchmove', function(event) {
+				if (!event.comesFromScrollable) {
+					event.preventDefault()
+				}
+			})
+		});
+		field.blur(function() {
+			$("#modal").hide();
+			$(".result").hide();
+			$('.content').removeClass('no-scroll')
+		});
 	});
 
 
@@ -361,25 +404,25 @@ function textCounter(field, field2, maxlimit) {
 
 
 function lockScroll() {
-		var scrollPosition = [
-			self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
-			self.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-		];
-		
-		var html = jQuery('html'); 
-		html.data('scroll-position', scrollPosition);
-		html.data('previous-overflow', html.css('overflow'));
-		html.css('overflow', 'hidden');
-		window.scrollTo(scrollPosition[0], scrollPosition[1]);
-		return scrollPosition
+	var scrollPosition = [
+		self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+		self.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+	];
+
+	var html = jQuery('html');
+	html.data('scroll-position', scrollPosition);
+	html.data('previous-overflow', html.css('overflow'));
+	html.css('overflow', 'hidden');
+	window.scrollTo(scrollPosition[0], scrollPosition[1]);
+	return scrollPosition
 }
 
 function resetScroll() {
 	// un-lock scroll position
-var html = jQuery('html');
-var scrollPosition = html.data('scroll-position');
-html.css('overflow', html.data('previous-overflow'));
-window.scrollTo(scrollPosition[0], scrollPosition[1])
+	var html = jQuery('html');
+	var scrollPosition = html.data('scroll-position');
+	html.css('overflow', html.data('previous-overflow'));
+	window.scrollTo(scrollPosition[0], scrollPosition[1])
 }
 
 function darkenNav() {
