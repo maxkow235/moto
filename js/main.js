@@ -18,6 +18,8 @@ $(document).ready(function() {
 		closeBtnInside: true
 	})
 
+	$("body").wrapInner("<div id='page-wrap'></div>");
+
 
 	$('#leave-feedback').magnificPopup({
 		type: 'inline',
@@ -76,7 +78,7 @@ $(document).ready(function() {
 	$('.navbar-toggler').click(function() {
 		darkenNav()
 		$('nav.navbar-dark.bg-dark').toggleClass('darken');
-		$('body').toggleClass('freezePage');
+		$('#page-wrap').toggleClass('freezePage');
 
 		$(this).toggleClass('collapsed');
 		$($(this).data('target')).toggleClass('show');
