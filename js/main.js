@@ -339,7 +339,7 @@ function radioVal(val) {
 function setDataPicker() {
 	var d = new Date();
 
-	$(`.picker.months [data-month=${d.getMonth()}]`).addClass('active');
+	$(`.picker.months [data-month=${d.getMonth()+1}]`).addClass('active');
 	$(`.picker.yearss [data-year=${d.getFullYear()}]`).addClass('active');
 }
 
