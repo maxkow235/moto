@@ -76,8 +76,8 @@ $(document).ready(function() {
 	$('.navbar-toggler').click(function() {
 		darkenNav()
 		$('nav.navbar-dark.bg-dark').toggleClass('darken');
-		$('body').toggleClass('menu-open');
-		$('html').toggleClass('menu-open');
+		$('body').toggleClass('freezePage');
+
 		$(this).toggleClass('collapsed');
 		$($(this).data('target')).toggleClass('show');
 	});
