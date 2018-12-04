@@ -20,7 +20,6 @@ $(document).ready(function() {
 
 
 
-
 	$('#leave-feedback').magnificPopup({
 		type: 'inline',
 		midClick: true,
@@ -78,11 +77,20 @@ $(document).ready(function() {
 	$('.navbar-toggler').click(function() {
 		darkenNav()
 		$('nav.navbar-dark.bg-dark').toggleClass('darken');
-		$('body').toggleClass('freezePage');
+		$('body').toggleClass('non-scroll');
+
+		if ($('body').hasClass('non-scroll')) {
+			lockScroll()
+		} else {
+			resetScroll()
+		}
 
 		$(this).toggleClass('collapsed');
 		$($(this).data('target')).toggleClass('show');
+
+
 	});
+
 
 	$('.prod-card').click(function() {
 		$(this).removeClass('blur');
@@ -151,10 +159,10 @@ $(document).ready(function() {
 	$('#calendar').fullCalendar({
 		firstDay: 1,
 		fixedWeekCount: true,
-		weekMode:'fixed',
+		weekMode: 'fixed',
 		aspectRatio: 0,
 		contentHeight: 250,
-		height:300,
+		height: 300,
 		defaultView: 'month',
 
 		events: [
@@ -200,7 +208,7 @@ $(document).ready(function() {
 			$(".fc-day-top:not(.not_available) a.day-link").click(function(e) {
 				e.preventDefault();
 				var date = $($(this).parent()).data("date");
-				
+
 				var popup = $(this).attr("href");
 				$.magnificPopup.open({
 
@@ -237,7 +245,7 @@ $(document).ready(function() {
 	$('.comment-form textarea').keyup(function() {
 		textCounter(this, 'counter', $(this).attr('maxlength'));
 	})
-	
+
 	radioVal($(".range-slider__range").val())
 
 	//range show value
@@ -355,6 +363,29 @@ function textCounter(field, field2, maxlimit) {
 	} else {
 		countfield.innerHTML = maxlimit - field.value.length;
 	}
+}
+
+
+function lockScroll() {
+	var scrollPosition = [
+		self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+		self.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+	];
+
+	var html = jQuery('html');
+	html.data('scroll-position', scrollPosition);
+	html.data('previous-overflow', html.css('overflow'));
+	html.css('overflow', 'hidden');
+	window.scrollTo(scrollPosition[0], scrollPosition[1]);
+
+}
+
+function resetScroll() {
+	// un-lock scroll position
+	var html = jQuery('html');
+	var scrollPosition = html.data('scroll-position');
+	html.css('overflow', html.data('previous-overflow'));
+	window.scrollTo(scrollPosition[0], scrollPosition[1])
 }
 
 function darkenNav() {
