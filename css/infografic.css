@@ -29,7 +29,8 @@ section.infografic {
     margin-top: 40px;
     position: relative; }
   section.infografic img {
-    margin: 0 auto; }
+    margin: 0 auto;
+    width: 80%; }
     @media (max-width: 400px) {
       section.infografic img:not(.biker) {
         width: 100%; } }

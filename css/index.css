@@ -67,6 +67,9 @@ section.motopark .moto-slide img {
 section.courses .course-slide img {
   width: 80%; }
 
+section.contacts img {
+  width: 70% !important; }
+
 section.about_school {
   padding: 25px 0;
   min-height: 765px;
