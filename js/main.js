@@ -78,7 +78,7 @@ $(document).ready(function() {
 		darkenNav()
 		$('nav.navbar-dark.bg-dark').toggleClass('darken');
 		$('body').toggleClass('freezePage');
-
+		$('html').toggleClass('freezePage');
 		$(this).toggleClass('collapsed');
 		$($(this).data('target')).toggleClass('show');
 
