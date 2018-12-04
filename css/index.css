@@ -49,6 +49,24 @@ section.teachers, section.motopark, section.equipment {
 section.motopark {
   padding-top: 25px; }
 
+section.teachers .teacher-slide img {
+  margin: 0 auto;
+  width: 60% !important; }
+
+section img {
+  width: 100% !important; }
+  section img[alt=Helmet] {
+    width: 60% !important; }
+
+.img-wrap img {
+  width: 100% !important; }
+
+section.motopark .moto-slide img {
+  width: 80%; }
+
+section.courses .course-slide img {
+  width: 80%; }
+
 section.about_school {
   padding: 25px 0;
   min-height: 765px;
