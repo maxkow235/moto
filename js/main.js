@@ -77,13 +77,7 @@ $(document).ready(function() {
 	$('.navbar-toggler').click(function() {
 		darkenNav()
 		$('nav.navbar-dark.bg-dark').toggleClass('darken');
-		$('body').toggleClass('non-scroll');
-
-		if ($('body').hasClass('non-scroll')) {
-			lockScroll()
-		} else {
-			resetScroll()
-		}
+		$('body').toggleClass('freezePage');
 
 		$(this).toggleClass('collapsed');
 		$($(this).data('target')).toggleClass('show');
@@ -367,25 +361,25 @@ function textCounter(field, field2, maxlimit) {
 
 
 function lockScroll() {
-	var scrollPosition = [
-		self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
-		self.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-	];
-
-	var html = jQuery('html');
-	html.data('scroll-position', scrollPosition);
-	html.data('previous-overflow', html.css('overflow'));
-	html.css('overflow', 'hidden');
-	window.scrollTo(scrollPosition[0], scrollPosition[1]);
-
+		var scrollPosition = [
+			self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+			self.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+		];
+		
+		var html = jQuery('html'); 
+		html.data('scroll-position', scrollPosition);
+		html.data('previous-overflow', html.css('overflow'));
+		html.css('overflow', 'hidden');
+		window.scrollTo(scrollPosition[0], scrollPosition[1]);
+		return scrollPosition
 }
 
 function resetScroll() {
 	// un-lock scroll position
-	var html = jQuery('html');
-	var scrollPosition = html.data('scroll-position');
-	html.css('overflow', html.data('previous-overflow'));
-	window.scrollTo(scrollPosition[0], scrollPosition[1])
+var html = jQuery('html');
+var scrollPosition = html.data('scroll-position');
+html.css('overflow', html.data('previous-overflow'));
+window.scrollTo(scrollPosition[0], scrollPosition[1])
 }
 
 function darkenNav() {
