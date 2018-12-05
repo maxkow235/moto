@@ -20,6 +20,7 @@ $(document).ready(function() {
 
 
 
+
 	$('#leave-feedback').magnificPopup({
 		type: 'inline',
 		midClick: true,
@@ -77,9 +78,10 @@ $(document).ready(function() {
 	$('.navbar-toggler').click(function() {
 		darkenNav()
 		$('nav.navbar-dark.bg-dark').toggleClass('darken');
-		$('div#wrap').toggleClass('freezePage');
-		$('html').toggleClass('freezePage');
-
+		
+		$('body').toggleClass('modal-open');
+		$('body>#wrap').toggleClass('freezePage');
+	
 		$(this).toggleClass('collapsed');
 		$($(this).data('target')).toggleClass('show');
 
