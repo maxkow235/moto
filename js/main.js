@@ -74,7 +74,7 @@ $(document).ready(function() {
 		e.preventDefault()
 		$('#course-popup').addClass('submitted');
 	})
-	$('body').wrapInner('<div id="wrap"></div>');
+	//$('body').wrapInner('<div id="wrap"></div>');
 	$('.navbar-toggler').click(function() {
 		darkenNav()
 		$('nav.navbar-dark.bg-dark').toggleClass('darken');
@@ -373,12 +373,17 @@ var freezeVp = function(e) {
     e.preventDefault();
 }
 
+var scrollVp = function(e) {
+    e.preventDefault();
+}
+
 
 function stopBodyScrolling (bool) {
     if (bool === true) {
-        document.body.addEventListener("touchmove", freezeVp, {passive:false});
+        document.querySelector("#wrap").addEventListener("touchmove", freezeVp, {passive:false});
+       // document.querySelector("#navbarContent").removeEventListener("touchmove", freezeVp, {passive:false});
     } else {
-        document.body.removeEventListener("touchmove", freezeVp, {passive:false});
+        document.querySelector("#wrap").removeEventListener("touchmove", freezeVp, {passive:false});
     }
 }
 
