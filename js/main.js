@@ -81,7 +81,11 @@ $(document).ready(function() {
 		
 		$('body').toggleClass('modal-open');
 		$('body>#wrap').toggleClass('freezePage');
-	
+		if($('body').hasClass('modal-open')) {
+		stopBodyScrolling(true)
+	} else {
+		stopBodyScrolling(false)
+	}
 		$(this).toggleClass('collapsed');
 		$($(this).data('target')).toggleClass('show');
 
@@ -151,31 +155,7 @@ $(document).ready(function() {
 
 	});
 
-	jQuery(document).ready(function() {
-		var field = $(".searchMe");
-		field.keypress(function() {
-			$("#modal").show();
-			$('.content').addClass('no-scroll')
-			$(".result").show();
-			this.$scrollableEl.on('touchmove', function(event) {
-				event.comesFromScrollable = true;
-				//when you have containers that are srollable but 
-				//doesn't have enough content to scroll sometimes:
-				//event.comesFromScrollable = el.offsetHeight < el.scrollHeight;
-			})
-
-			$document.on('touchmove', function(event) {
-				if (!event.comesFromScrollable) {
-					event.preventDefault()
-				}
-			})
-		});
-		field.blur(function() {
-			$("#modal").hide();
-			$(".result").hide();
-			$('.content').removeClass('no-scroll')
-		});
-	});
+	
 
 
 
@@ -389,27 +369,19 @@ function textCounter(field, field2, maxlimit) {
 }
 
 
-function lockScroll() {
-	var scrollPosition = [
-		self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
-		self.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-	];
-
-	var html = jQuery('html');
-	html.data('scroll-position', scrollPosition);
-	html.data('previous-overflow', html.css('overflow'));
-	html.css('overflow', 'hidden');
-	window.scrollTo(scrollPosition[0], scrollPosition[1]);
-	return scrollPosition
+var freezeVp = function(e) {
+    e.preventDefault();
 }
 
-function resetScroll() {
-	// un-lock scroll position
-	var html = jQuery('html');
-	var scrollPosition = html.data('scroll-position');
-	html.css('overflow', html.data('previous-overflow'));
-	window.scrollTo(scrollPosition[0], scrollPosition[1])
+
+function stopBodyScrolling (bool) {
+    if (bool === true) {
+        document.body.addEventListener("touchmove", freezeVp, {passive:false});
+    } else {
+        document.body.removeEventListener("touchmove", freezeVp, {passive:false});
+    }
 }
+
 
 function darkenNav() {
 	scroll_pos = $(this).scrollTop();
