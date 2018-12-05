@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	darkenNav()
 	//Test MENU Remove on production!!
+	alert('test')
 	initMenu()
 	setDataPicker()
 	$(document).ready(function() {
