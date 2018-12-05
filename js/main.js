@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	darkenNav()
 	//Test MENU Remove on production!!
-	alert('test')
+	
 	initMenu()
 	setDataPicker()
 	$(document).ready(function() {
@@ -82,11 +82,7 @@ $(document).ready(function() {
 		
 		$('body').toggleClass('modal-open');
 		$('body>#wrap').toggleClass('freezePage');
-		if($('body').hasClass('modal-open')) {
-		stopBodyScrolling(true)
-	} else {
-		stopBodyScrolling(false)
-	}
+	
 		$(this).toggleClass('collapsed');
 		$($(this).data('target')).toggleClass('show');
 
@@ -370,23 +366,6 @@ function textCounter(field, field2, maxlimit) {
 }
 
 
-var freezeVp = function(e) {
-    e.preventDefault();
-}
-
-var scrollVp = function(e) {
-    e.preventDefault();
-}
-
-
-function stopBodyScrolling (bool) {
-    if (bool === true) {
-        document.querySelector("#wrap").addEventListener("touchmove", freezeVp, {passive:false});
-       // document.querySelector("#navbarContent").removeEventListener("touchmove", freezeVp, {passive:false});
-    } else {
-        document.querySelector("#wrap").removeEventListener("touchmove", freezeVp, {passive:false});
-    }
-}
 
 
 function darkenNav() {
